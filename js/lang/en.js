@@ -44,4 +44,6 @@ export default {
   dl_stable: "Download {v}",
   dl_pre: "Pre-release {v}",
   sys_Demo: "Demo",
+  pre_for_rc: "With firmware 2.0.0-rc1 or later use the pre-release; the official one only works with firmware 1.x.",
+  pre_for_rc_only: "Needs firmware 2.0.0-rc1 or later.",
 };

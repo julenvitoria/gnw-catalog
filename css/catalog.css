@@ -86,3 +86,4 @@
 .item__up { margin: 0; font-size: 12.5px; color: var(--text-muted); }
 .item__up a { color: var(--text-muted); }
 .ahead { font-size: 11px; font-weight: 700; color: #6fd08c; border: 1px solid #2b6a3c; border-radius: 5px; padding: 1px 5px; }
+.item__prenote { margin: 0; font-size: 12.5px; color: #ffb36b; border-left: 2px solid #b8650f; padding-left: 8px; }

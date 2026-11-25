@@ -103,6 +103,7 @@ function card(it) {
       const p = relLine(v.pre, "item__rel--pre");
       p.prepend(el("span", "pre", t("prerelease")), " ");
       c.append(p);
+      if (it.pre_for_rc) c.append(el("p", "item__prenote", t(v.release ? "pre_for_rc" : "pre_for_rc_only")));
     }
     if (!v.release && !v.pre) c.append(el("p", "item__rel", t("no_release")));
   }

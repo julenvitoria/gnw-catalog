@@ -1,5 +1,5 @@
 {
-  "_comment": "One entry per project. kind: core | homebrew | tool. asset: glob of the release file to offer (default: the first .zip, else .bin, never a 'debug' one). web: a page to open instead of a download. upstream: the repo this one is a fork of (its version is shown next to it). data: 'own' = needs the original game's files, 'free' = needs game files that are free to download. versions.json is written by .github/workflows/versions.yml.",
+  "_comment": "One entry per project. kind: core | homebrew | tool. asset: glob of the release file to offer (default: the first .zip, else .bin, never a 'debug' one). web: a page to open instead of a download. upstream: the repo this one is a fork of (its version is shown next to it). pre_for_rc: its pre-release is the one for the firmware's RC (2.0.0-rc1 and later). data: 'own' = needs the original game's files, 'free' = needs game files that are free to download. versions.json is written by .github/workflows/versions.yml.",
   "firmware": {
     "repo": "sylverb/game-and-watch-retro-go-sd",
     "name": "Retro-Go SD",
@@ -85,6 +85,7 @@
       "name": "PICO-8",
       "kind": "core",
       "system": "PICO-8",
+      "pre_for_rc": true,
       "desc": {
         "en": "PICO-8 engine: runs .p8 and .p8.png cartridges.",
         "es": "Motor de PICO-8: ejecuta cartuchos .p8 y .p8.png."

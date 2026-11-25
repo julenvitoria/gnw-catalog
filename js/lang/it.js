@@ -44,4 +44,6 @@ export default {
   dl_stable: "Scarica {v}",
   dl_pre: "Anteprima {v}",
   sys_Demo: "Demo",
+  pre_for_rc: "Con il firmware 2.0.0-rc1 o successivo usa l'anteprima; quella ufficiale funziona solo con il firmware 1.x.",
+  pre_for_rc_only: "Richiede il firmware 2.0.0-rc1 o successivo.",
 };

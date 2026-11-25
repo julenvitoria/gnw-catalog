@@ -44,4 +44,6 @@ export default {
   dl_stable: "Télécharger {v}",
   dl_pre: "Préversion {v}",
   sys_Demo: "Démo",
+  pre_for_rc: "Avec le firmware 2.0.0-rc1 ou ultérieur, utilisez la préversion ; la version officielle ne fonctionne qu'avec le firmware 1.x.",
+  pre_for_rc_only: "Nécessite le firmware 2.0.0-rc1 ou ultérieur.",
 };
