@@ -42,7 +42,7 @@ export default {
   original: "원본",
   ahead: "앞섬",
   dl_stable: "{v} 다운로드",
-  dl_pre: "사전 릴리스 {v}",
+  dl_pre: "{v} 다운로드(사전 릴리스)",
   sys_Demo: "데모",
   pre_for_rc: "펌웨어 v2.0.0-rc1 이상에서는 작동하지 않습니다. 해당 버전부터는 사전 릴리스를 사용하세요.",
   pre_for_rc_only: "펌웨어 v2.0.0-rc1 이상이 필요합니다.",

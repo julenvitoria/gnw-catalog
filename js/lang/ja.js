@@ -42,7 +42,7 @@ export default {
   original: "オリジナル",
   ahead: "先行",
   dl_stable: "{v} をダウンロード",
-  dl_pre: "プレリリース {v}",
+  dl_pre: "{v} をダウンロード（プレリリース）",
   sys_Demo: "デモ",
   pre_for_rc: "ファームウェア v2.0.0-rc1 以降では動作しません。そのバージョンからはプレリリースを使ってください。",
   pre_for_rc_only: "ファームウェア v2.0.0-rc1 以降が必要です。",

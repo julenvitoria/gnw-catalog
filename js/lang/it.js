@@ -42,7 +42,7 @@ export default {
   original: "originale",
   ahead: "più avanti",
   dl_stable: "Scarica {v}",
-  dl_pre: "Anteprima {v}",
+  dl_pre: "Scarica {v} (anteprima)",
   sys_Demo: "Demo",
   pre_for_rc: "Non funziona con il firmware v2.0.0-rc1 o successivo: da quella versione in poi usa l'anteprima.",
   pre_for_rc_only: "Richiede il firmware v2.0.0-rc1 o successivo.",

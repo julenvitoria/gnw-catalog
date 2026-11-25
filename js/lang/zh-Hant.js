@@ -42,7 +42,7 @@ export default {
   original: "原版",
   ahead: "較新",
   dl_stable: "下載 {v}",
-  dl_pre: "預發布 {v}",
+  dl_pre: "下載 {v}（預發布）",
   sys_Demo: "展示",
   pre_for_rc: "不適用於 v2.0.0-rc1 及以上韌體：從該版本起請使用預發布版。",
   pre_for_rc_only: "需要 v2.0.0-rc1 或更新版本的韌體。",

@@ -42,7 +42,7 @@ export default {
   original: "Original",
   ahead: "voraus",
   dl_stable: "{v} herunterladen",
-  dl_pre: "Vorabversion {v}",
+  dl_pre: "{v} herunterladen (Vorabversion)",
   sys_Demo: "Demo",
   pre_for_rc: "Läuft nicht mit Firmware v2.0.0-rc1 oder neuer: ab dieser Version die Vorabversion verwenden.",
   pre_for_rc_only: "Benötigt Firmware v2.0.0-rc1 oder neuer.",

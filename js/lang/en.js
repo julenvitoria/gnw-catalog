@@ -42,7 +42,7 @@ export default {
   original: "original",
   ahead: "ahead",
   dl_stable: "Download {v}",
-  dl_pre: "Pre-release {v}",
+  dl_pre: "Download {v} (pre-release)",
   sys_Demo: "Demo",
   pre_for_rc: "Does not work with firmware v2.0.0-rc1 or later: from that version on, use the pre-release.",
   pre_for_rc_only: "Needs firmware v2.0.0-rc1 or later.",
