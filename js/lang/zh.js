@@ -51,4 +51,7 @@ export default {
   cheats: "金手指",
   bios: "BIOS",
   bios_opt: "可选 BIOS",
+  official: "官方",
+  in_installer: "已包含在固件的安装程序中。",
+  bios_inc: "已附带 BIOS",
 };

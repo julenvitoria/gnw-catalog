@@ -51,4 +51,7 @@ export default {
   cheats: "trapaças",
   bios: "BIOS",
   bios_opt: "BIOS opcional",
+  official: "Oficial",
+  in_installer: "Incluído no instalador do firmware.",
+  bios_inc: "BIOS incluída",
 };

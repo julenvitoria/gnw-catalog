@@ -51,4 +51,7 @@ export default {
   cheats: "читы",
   bios: "BIOS",
   bios_opt: "BIOS (необязательно)",
+  official: "Официальный",
+  in_installer: "Входит в установщик прошивки.",
+  bios_inc: "BIOS в комплекте",
 };

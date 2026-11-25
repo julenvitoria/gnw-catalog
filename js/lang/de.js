@@ -51,4 +51,7 @@ export default {
   cheats: "Cheats",
   bios: "BIOS",
   bios_opt: "Optionales BIOS",
+  official: "Offiziell",
+  in_installer: "Im Installer der Firmware enthalten.",
+  bios_inc: "BIOS enthalten",
 };

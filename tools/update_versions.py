@@ -151,6 +151,24 @@ def add_core_info(entry, previous):
             print(f"  {rel['download']}: {e}", file=sys.stderr)
 
 
+INSTALLER_LIST = "https://raw.githubusercontent.com/sylverb/installer-retro-go-sd/main/packages.list"
+
+
+def installer_repos():
+    """The repos the firmware's core installer bundles (lines 'github:owner/repo[:glob]')."""
+    text = download(INSTALLER_LIST).decode("utf-8", "replace")
+    repos = []
+    for line in text.splitlines():
+        line = line.split("#", 1)[0].strip()
+        if line.startswith("github:"):
+            repos.append(line[len("github:"):].split(":", 1)[0])
+        elif "|" in line:                                   # old 'kind | id | name | source' form
+            src = line.split("|")[-1].strip()
+            if src.startswith("github:"):
+                repos.append(src[len("github:"):].split(":", 1)[0])
+    return sorted(set(repos))
+
+
 def releases(repo, pattern):
     rels = [r for r in (api(f"repos/{repo}/releases?per_page=30") or []) if not r.get("draft")]
     rels.sort(key=lambda r: r.get("published_at") or "", reverse=True)
@@ -197,6 +215,13 @@ def main():
             add_core_info(out[repo], previous.get(repo))
         r, p = out[repo]["release"], out[repo]["pre"]
         print(f"{repo}: {r['version'] if r else '-'}{' + pre ' + p['version'] if p else ''}", file=sys.stderr)
+
+    try:
+        out["_installer"] = installer_repos()
+        print(f"installer: {len(out['_installer'])} projects", file=sys.stderr)
+    except (urllib.error.URLError, OSError) as e:
+        out["_installer"] = previous.get("_installer", [])
+        print(f"installer list: {e} (kept the previous one)", file=sys.stderr)
 
     with open(path, "w", encoding="utf-8") as fh:
         json.dump(out, fh, ensure_ascii=False, indent=2, sort_keys=True)

@@ -51,4 +51,7 @@ export default {
   cheats: "치트",
   bios: "BIOS",
   bios_opt: "선택 BIOS",
+  official: "공식",
+  in_installer: "펌웨어 설치 프로그램에 포함되어 있습니다.",
+  bios_inc: "BIOS 포함",
 };

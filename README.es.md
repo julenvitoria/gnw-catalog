@@ -17,7 +17,9 @@ enlace de descarga a la última versión de cada proyecto.
   se abre en lugar de una descarga), `upstream` (en un fork: el repo original,
   cuya versión se muestra al lado) y `data` (`own` = necesita los archivos del
   juego original, `free` = necesita archivos gratuitos) y `bios`
-  (`{dir, files, optional}`). La ficha `firmware`
+  (`{dir, files, optional, included, when}`) y `official` (los que sylverb
+  cita en el README del firmware; «en el instalador» se lee del
+  `packages.list` de installer-retro-go-sd). La ficha `firmware`
   de arriba se muestra como un panel aparte.
 - `.github/workflows/versions.yml` se ejecuta cada 8 horas (y cada vez que
   cambia `catalog.json`): `tools/update_versions.py` consulta la última release

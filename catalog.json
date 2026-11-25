@@ -1,5 +1,5 @@
 {
-  "_comment": "One entry per project. kind: core | homebrew | tool. asset: glob of the release file to offer (default: the first .zip, else .bin, never a 'debug' one). web: a page to open instead of a download. upstream: the repo this one is a fork of (its version is shown next to it). bios: BIOS files the core reads, {dir, files, optional} (the header of the core does not say). data: 'own' = needs the original game's files, 'free' = needs game files that are free to download. versions.json is written by .github/workflows/versions.yml.",
+  "_comment": "One entry per project. kind: core | homebrew | tool. asset: glob of the release file to offer (default: the first .zip, else .bin, never a 'debug' one). web: a page to open instead of a download. upstream: the repo this one is a fork of (its version is shown next to it). bios: BIOS files the core reads, {dir, files, optional, included (shipped in the zip), when {en,es} (only for some games)} -- the core's header does not say. official: listed in the firmware's README by sylverb ('in the installer' is read from installer-retro-go-sd's packages.list). data: 'own' = needs the original game's files, 'free' = needs game files that are free to download. versions.json is written by .github/workflows/versions.yml.",
   "firmware": {
     "repo": "sylverb/game-and-watch-retro-go-sd",
     "name": "Retro-Go SD",
@@ -88,7 +88,8 @@
       "desc": {
         "en": "PICO-8 engine: runs .p8 and .p8.png cartridges.",
         "es": "Motor de PICO-8: ejecuta cartuchos .p8 y .p8.png."
-      }
+      },
+      "official": true
     },
     {
       "repo": "Macs75/gba-retro-go-sd",
@@ -96,7 +97,13 @@
       "kind": "core",
       "system": "Game Boy Advance",
       "upstream": "sylverb/gba-retro-go-sd",
-      "bios": { "dir": "gba", "files": ["gba_bios.bin"], "optional": true },
+      "bios": {
+        "dir": "gba",
+        "files": [
+          "gba_bios.bin"
+        ],
+        "optional": true
+      },
       "desc": {
         "en": "Game Boy Advance emulator based on gpSP.",
         "es": "Emulador de Game Boy Advance basado en gpSP."
@@ -119,7 +126,14 @@
       "kind": "core",
       "system": "Neo Geo",
       "upstream": "sylverb/gngeo-retro-go-sd",
-      "bios": { "dir": "neogeo", "files": ["uni-bios.rom", "sfix.sfix", "000-lo.lo"] },
+      "bios": {
+        "dir": "neogeo",
+        "files": [
+          "uni-bios.rom",
+          "sfix.sfix",
+          "000-lo.lo"
+        ]
+      },
       "desc": {
         "en": "Neo Geo AES/MVS emulator.",
         "es": "Emulador de Neo Geo AES/MVS."
@@ -281,7 +295,8 @@
       "desc": {
         "en": "C port of the 1990 Acclaim LCD handheld.",
         "es": "Port en C de la maquinita LCD de Acclaim de 1990."
-      }
+      },
+      "official": true
     },
     {
       "repo": "sylverb/CoverStudio",
@@ -292,6 +307,430 @@
       "desc": {
         "en": "Finds cover art on ScreenScraper and converts it to the Game & Watch format.",
         "es": "Busca carátulas en ScreenScraper y las convierte al formato de la Game & Watch."
+      }
+    },
+    {
+      "repo": "sylverb/caprice32-retro-go-sd",
+      "name": "Caprice32",
+      "kind": "core",
+      "system": "Amstrad CPC 6128",
+      "official": true,
+      "asset": "caprice32-*.zip",
+      "desc": {
+        "en": "Amstrad CPC 6128 emulator.",
+        "es": "Emulador de Amstrad CPC 6128."
+      }
+    },
+    {
+      "repo": "sylverb/stella2014-retro-go-sd",
+      "name": "Stella 2014",
+      "kind": "core",
+      "system": "Atari 2600",
+      "official": true,
+      "asset": "stella2014-*.zip",
+      "desc": {
+        "en": "Atari 2600 emulator.",
+        "es": "Emulador de Atari 2600."
+      }
+    },
+    {
+      "repo": "sylverb/prosystem-retro-go-sd",
+      "name": "ProSystem",
+      "kind": "core",
+      "system": "Atari 7800",
+      "official": true,
+      "asset": "prosystem-*.zip",
+      "desc": {
+        "en": "Atari 7800 emulator.",
+        "es": "Emulador de Atari 7800."
+      }
+    },
+    {
+      "repo": "sylverb/lynx-retro-go-sd",
+      "name": "Handy",
+      "kind": "core",
+      "system": "Atari Lynx",
+      "official": true,
+      "asset": "lynx-*.zip",
+      "desc": {
+        "en": "Atari Lynx emulator.",
+        "es": "Emulador de Atari Lynx."
+      }
+    },
+    {
+      "repo": "sylverb/oswan-retro-go-sd",
+      "name": "Oswan",
+      "kind": "core",
+      "system": "WonderSwan / WonderSwan Color",
+      "official": true,
+      "desc": {
+        "en": "Bandai WonderSwan and WonderSwan Color emulator.",
+        "es": "Emulador de Bandai WonderSwan y WonderSwan Color."
+      }
+    },
+    {
+      "repo": "sylverb/doom-retro-go-sd",
+      "name": "Doom",
+      "kind": "core",
+      "system": "Doom I & II",
+      "official": true,
+      "asset": "doom-*.zip",
+      "data": "free",
+      "desc": {
+        "en": "Doom and Doom II engine (Chocolate Doom / rp2040-doom). Converts your WADs to .whd.",
+        "es": "Motor de Doom y Doom II (Chocolate Doom / rp2040-doom). Usa tus WAD convertidos a .whd."
+      }
+    },
+    {
+      "repo": "sylverb/o2em-retro-go-sd",
+      "name": "O2EM",
+      "kind": "core",
+      "system": "Videopac / Odyssey²",
+      "official": true,
+      "asset": "o2em-*.zip",
+      "bios": {
+        "dir": "videopac",
+        "files": [
+          "o2rom.bin"
+        ]
+      },
+      "desc": {
+        "en": "Magnavox Odyssey² / Philips Videopac emulator.",
+        "es": "Emulador de Magnavox Odyssey² / Philips Videopac."
+      }
+    },
+    {
+      "repo": "sylverb/blueMSX-retro-go-sd",
+      "name": "blueMSX",
+      "kind": "core",
+      "system": "MSX1/2/2+",
+      "official": true,
+      "asset": "blueMSX-*.zip",
+      "bios": {
+        "dir": "msx",
+        "files": [
+          "*.rom"
+        ],
+        "included": true
+      },
+      "desc": {
+        "en": "MSX, MSX2 and MSX2+ emulator.",
+        "es": "Emulador de MSX, MSX2 y MSX2+."
+      }
+    },
+    {
+      "repo": "sylverb/pce-go-retro-go-sd",
+      "name": "PCE-GO",
+      "kind": "core",
+      "system": "PC Engine / CD / SuperGrafx",
+      "official": true,
+      "asset": "pce-*.zip",
+      "bios": {
+        "dir": "pce",
+        "files": [
+          "syscard3.pce"
+        ],
+        "when": {
+          "en": "CD games",
+          "es": "juegos de CD"
+        }
+      },
+      "desc": {
+        "en": "PC Engine, TurboGrafx-16, SuperGrafx and PC Engine CD-ROM² emulator.",
+        "es": "Emulador de PC Engine, TurboGrafx-16, SuperGrafx y PC Engine CD-ROM²."
+      }
+    },
+    {
+      "repo": "sylverb/tgb-dual-retro-go-sd",
+      "name": "TGB Dual",
+      "kind": "core",
+      "system": "Game Boy / Game Boy Color",
+      "official": true,
+      "asset": "tgbdual-*.zip",
+      "bios": {
+        "dir": "gb",
+        "files": [
+          "gb_bios.bin",
+          "gbc_bios.bin"
+        ],
+        "optional": true
+      },
+      "desc": {
+        "en": "Game Boy and Game Boy Color emulator.",
+        "es": "Emulador de Game Boy y Game Boy Color."
+      }
+    },
+    {
+      "repo": "sylverb/gba-retro-go-sd",
+      "name": "GBA (gpSP)",
+      "kind": "core",
+      "system": "Game Boy Advance",
+      "official": true,
+      "asset": "gba-*.zip",
+      "bios": {
+        "dir": "gba",
+        "files": [
+          "gba_bios.bin"
+        ],
+        "optional": true
+      },
+      "desc": {
+        "en": "Game Boy Advance emulator based on gpSP.",
+        "es": "Emulador de Game Boy Advance basado en gpSP."
+      }
+    },
+    {
+      "repo": "sylverb/LCD-Game-Emulator-retro-go-sd",
+      "name": "LCD Game Emulator",
+      "kind": "core",
+      "system": "Game & Watch / LCD",
+      "official": true,
+      "asset": "LCD-Game-Emulator-*.zip",
+      "desc": {
+        "en": "Nintendo Game & Watch and other LCD handhelds.",
+        "es": "Game & Watch de Nintendo y otras maquinitas LCD."
+      }
+    },
+    {
+      "repo": "sylverb/fceumm-retro-go-sd",
+      "name": "FCEUmm",
+      "kind": "core",
+      "system": "NES / Famicom Disk System",
+      "official": true,
+      "asset": "fceumm-*.zip",
+      "bios": {
+        "dir": "nes",
+        "files": [
+          "disksys.rom"
+        ],
+        "when": {
+          "en": "FDS games",
+          "es": "juegos de FDS"
+        }
+      },
+      "desc": {
+        "en": "NES / Famicom and Famicom Disk System emulator.",
+        "es": "Emulador de NES / Famicom y Famicom Disk System."
+      }
+    },
+    {
+      "repo": "sylverb/snes-retro-go-sd",
+      "name": "SNES (LakeSnes)",
+      "kind": "core",
+      "system": "Super Nintendo",
+      "official": true,
+      "asset": "snes-*.zip",
+      "desc": {
+        "en": "Super Nintendo emulator based on LakeSnes.",
+        "es": "Emulador de Super Nintendo basado en LakeSnes."
+      }
+    },
+    {
+      "repo": "sylverb/PokeMini-retro-go-sd",
+      "name": "PokeMini",
+      "kind": "core",
+      "system": "Pokémon Mini",
+      "official": true,
+      "asset": "PokeMini-*.zip",
+      "desc": {
+        "en": "Nintendo Pokémon Mini emulator.",
+        "es": "Emulador de Pokémon Mini."
+      }
+    },
+    {
+      "repo": "sylverb/SMSPlusGX-retro-go-sd",
+      "name": "SMS Plus GX",
+      "kind": "core",
+      "system": "Master System / Game Gear / SG-1000 / ColecoVision",
+      "official": true,
+      "asset": "SmsPlusGX-*.zip",
+      "bios": {
+        "dir": "coleco",
+        "files": [
+          "coleco.bin"
+        ],
+        "included": true
+      },
+      "desc": {
+        "en": "Sega Master System, Game Gear, SG-1000 and ColecoVision emulator.",
+        "es": "Emulador de Sega Master System, Game Gear, SG-1000 y ColecoVision."
+      }
+    },
+    {
+      "repo": "sylverb/gwenesis-retro-go-sd",
+      "name": "Gwenesis",
+      "kind": "core",
+      "system": "Mega Drive / Genesis",
+      "official": true,
+      "asset": "gwenesis-*.zip",
+      "desc": {
+        "en": "Sega Mega Drive / Genesis emulator.",
+        "es": "Emulador de Sega Mega Drive / Genesis."
+      }
+    },
+    {
+      "repo": "sylverb/gngeo-retro-go-sd",
+      "name": "GnGeo",
+      "kind": "core",
+      "system": "Neo Geo",
+      "official": true,
+      "asset": "gngeo-*.zip",
+      "bios": {
+        "dir": "neogeo",
+        "files": [
+          "uni-bios.rom",
+          "sfix.sfix",
+          "000-lo.lo"
+        ]
+      },
+      "desc": {
+        "en": "Neo Geo AES/MVS emulator.",
+        "es": "Emulador de Neo Geo AES/MVS."
+      }
+    },
+    {
+      "repo": "sylverb/race-retro-go-sd",
+      "name": "RACE",
+      "kind": "core",
+      "system": "Neo Geo Pocket / Color",
+      "official": true,
+      "asset": "race-*.zip",
+      "desc": {
+        "en": "Neo Geo Pocket and Pocket Color emulator.",
+        "es": "Emulador de Neo Geo Pocket y Pocket Color."
+      }
+    },
+    {
+      "repo": "sylverb/potator-retro-go-sd",
+      "name": "Potator",
+      "kind": "core",
+      "system": "Watara Supervision",
+      "official": true,
+      "asset": "potator-*.zip",
+      "desc": {
+        "en": "Watara Supervision emulator.",
+        "es": "Emulador de Watara Supervision."
+      }
+    },
+    {
+      "repo": "sylverb/mine-sweeper-retro-go-sd",
+      "name": "Mine Sweeper",
+      "kind": "homebrew",
+      "system": "Port",
+      "official": true,
+      "asset": "MineSweeper-*.zip",
+      "desc": {
+        "en": "Minesweeper.",
+        "es": "El buscaminas."
+      }
+    },
+    {
+      "repo": "sylverb/pong-retro-go-sd",
+      "name": "Pong",
+      "kind": "homebrew",
+      "system": "Port",
+      "official": true,
+      "asset": "Pong-*.zip",
+      "desc": {
+        "en": "Pong.",
+        "es": "Pong."
+      }
+    },
+    {
+      "repo": "sylverb/snake-retro-go-sd",
+      "name": "Snake",
+      "kind": "homebrew",
+      "system": "Port",
+      "official": true,
+      "asset": "Snake-*.zip",
+      "desc": {
+        "en": "Snake.",
+        "es": "La serpiente."
+      }
+    },
+    {
+      "repo": "sylverb/zelda3-retro-go-sd",
+      "name": "Zelda 3",
+      "kind": "homebrew",
+      "system": "Port",
+      "official": true,
+      "asset": "Zelda.3-*.zip",
+      "data": "own",
+      "desc": {
+        "en": "The Legend of Zelda: A Link to the Past, from the zelda3 reimplementation.",
+        "es": "The Legend of Zelda: A Link to the Past, a partir de la reimplementación zelda3."
+      }
+    },
+    {
+      "repo": "sylverb/smw-retro-go-sd",
+      "name": "Super Mario World",
+      "kind": "homebrew",
+      "system": "Port",
+      "official": true,
+      "asset": "Super.Mario.World-*.zip",
+      "data": "own",
+      "desc": {
+        "en": "Super Mario World, from the smw reimplementation.",
+        "es": "Super Mario World, a partir de la reimplementación smw."
+      }
+    },
+    {
+      "repo": "sylverb/ccleste-retro-go-sd",
+      "name": "Celeste Classic",
+      "kind": "homebrew",
+      "system": "Port",
+      "official": true,
+      "asset": "Celeste-*.zip",
+      "desc": {
+        "en": "Celeste Classic, the original PICO-8 game.",
+        "es": "Celeste Classic, el juego original de PICO-8."
+      }
+    },
+    {
+      "repo": "sylverb/tama-retro-go-sd",
+      "name": "Tamagotchi P1",
+      "kind": "homebrew",
+      "system": "Port",
+      "official": true,
+      "asset": "TamagotchiP1-*.zip",
+      "desc": {
+        "en": "Tamagotchi P1 emulator.",
+        "es": "Emulador del Tamagotchi P1."
+      }
+    },
+    {
+      "repo": "sylverb/NXEngine-retro-go-sd",
+      "name": "Cave Story",
+      "kind": "homebrew",
+      "system": "Port",
+      "official": true,
+      "asset": "CaveStory_en-*.zip",
+      "desc": {
+        "en": "Cave Story on the NXEngine engine, with the freeware game data.",
+        "es": "Cave Story con el motor NXEngine, con los datos freeware del juego."
+      }
+    },
+    {
+      "repo": "sylverb/durak-retro-go-sd",
+      "name": "Duren",
+      "kind": "homebrew",
+      "system": "Port",
+      "official": true,
+      "desc": {
+        "en": "Duren, the Durak card game.",
+        "es": "Duren, el juego de cartas Durak."
+      }
+    },
+    {
+      "repo": "sylverb/openlara-retro-go-sd",
+      "name": "Tomb Raider (OpenLara)",
+      "kind": "homebrew",
+      "system": "Port",
+      "official": true,
+      "data": "own",
+      "desc": {
+        "en": "Tomb Raider on the OpenLara engine.",
+        "es": "Tomb Raider con el motor OpenLara."
       }
     }
   ]

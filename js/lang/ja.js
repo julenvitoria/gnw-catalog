@@ -51,4 +51,7 @@ export default {
   cheats: "チート",
   bios: "BIOS",
   bios_opt: "BIOS（任意）",
+  official: "公式",
+  in_installer: "ファームウェアのインストーラーに含まれています。",
+  bios_inc: "BIOS 同梱",
 };

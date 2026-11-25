@@ -87,13 +87,17 @@ function card(it) {
   const v = vers(it.repo);
   const c = el("article", `item item--${it.kind}`);
   const head = el("div", "item__head");
-  head.append(el("h2", "item__name", it.name), el("span", `badge badge--${it.kind}`, t(`kind_${it.kind}`)));
+  const badges = el("span", "badges");
+  if (it.official) badges.append(el("span", "badge badge--official", t("official")));
+  badges.append(el("span", `badge badge--${it.kind}`, t(`kind_${it.kind}`)));
+  head.append(el("h2", "item__name", it.name), badges);
   const meta = el("p", "item__meta");
   meta.append(el("span", "item__sys", sysLabel(it.system)), document.createTextNode(" · "));
   const by = el("a", "", t("by", { a: owner(it) }));
   by.href = `https://github.com/${owner(it)}`;
   meta.append(by);
   c.append(head, meta, el("p", "item__desc", desc(it)));
+  if ((state.versions._installer || []).includes(it.repo)) c.append(el("p", "item__inst", t("in_installer")));
   if (it.data) c.append(el("p", "item__data", t(it.data === "free" ? "data_free" : "data_own")));
   const systems = v && ((v.pre?.info?.systems) || (v.release?.info?.systems));
   if (systems || it.bios) {
@@ -108,8 +112,10 @@ function card(it) {
     if (it.bios) {
       const p = el("p");
       const dir = `/bios/${it.bios.dir}/`;
-      p.append(el("b", "", t(it.bios.optional ? "bios_opt" : "bios")), " · ",
-        it.bios.files.length === 1 ? dir + it.bios.files[0] : `${dir} → ${it.bios.files.join(", ")}`);
+      const b = it.bios;
+      let label = t(b.included ? "bios_inc" : b.optional ? "bios_opt" : "bios");
+      if (b.when) label += ` (${desc({ desc: b.when })})`;
+      p.append(el("b", "", label), " · ", b.files.length === 1 ? dir + b.files[0] : `${dir} → ${b.files.join(", ")}`);
       box.append(p);
     }
     c.append(box);
@@ -217,7 +223,7 @@ function render() {
     chip.querySelector("b").textContent = searched.filter((it) => k === "all" || it.kind === k).length;
   }
   const shown = searched.filter((it) => state.kind === "all" || it.kind === state.kind)
-    .sort((a, b) => ORDER[a.kind] - ORDER[b.kind] || a.name.localeCompare(b.name));
+    .sort((a, b) => ORDER[a.kind] - ORDER[b.kind] || a.name.localeCompare(b.name) || !!b.official - !!a.official);
   const grid = $("grid");
   grid.textContent = "";
   for (const it of shown) grid.append(card(it));

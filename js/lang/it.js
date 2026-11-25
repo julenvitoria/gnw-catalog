@@ -51,4 +51,7 @@ export default {
   cheats: "trucchi",
   bios: "BIOS",
   bios_opt: "BIOS opzionale",
+  official: "Ufficiale",
+  in_installer: "Incluso nell'installer del firmware.",
+  bios_inc: "BIOS inclusa",
 };
