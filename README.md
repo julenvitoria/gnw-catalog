@@ -34,7 +34,7 @@ download link to each project's latest release.
 
 ## Adding a project
 
-Add an entry to `catalog.json`, or [open an issue](https://github.com/julenvitoria/gnw-catalog/issues/new)
+Add an entry to `catalog.json`, or [open an issue](https://github.com/julenvitoria/gnw-catalog/issues/new?template=new-project.yml)
 with the repo's link.
 
 ## Development

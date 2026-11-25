@@ -37,7 +37,7 @@ enlace de descarga a la última versión de cada proyecto.
 
 ## Añadir un proyecto
 
-Añade una ficha a `catalog.json`, o [abre un issue](https://github.com/julenvitoria/gnw-catalog/issues/new)
+Añade una ficha a `catalog.json`, o [abre un issue](https://github.com/julenvitoria/gnw-catalog/issues/new?template=new-project.yml)
 con el enlace al repo.
 
 ## Desarrollo

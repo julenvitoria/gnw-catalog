@@ -1,0 +1,111 @@
+name: "New project / Nuevo proyecto"
+description: "Propose a core, homebrew or tool for the catalog · Propón un core, homebrew o herramienta para el catálogo"
+title: "New project / Nuevo proyecto: "
+labels: ["nuevo-proyecto"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! Fill in what you know; the release, version and (for a core) its ROM folders and extensions are read automatically from the repo.
+        ¡Gracias! Rellena lo que sepas; la release, la versión y (en un core) sus carpetas de roms y extensiones se leen solas del repo.
+
+  - type: input
+    id: repo
+    attributes:
+      label: "GitHub repository · Repositorio de GitHub"
+      placeholder: "https://github.com/owner/repo"
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: "Name · Nombre"
+      placeholder: "Wolfenstein 3D"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: "Type · Tipo"
+      options:
+        - "Core (emulator · emulador, /cores/)"
+        - "Homebrew (game or app · juego o app, /homebrews/)"
+        - "Tool (web page or program · página web o programa)"
+    validations:
+      required: true
+
+  - type: input
+    id: system
+    attributes:
+      label: "System · Sistema"
+      description: "The emulated system, or Port / App / Demo for a homebrew · El sistema emulado, o Port / App / Demo en un homebrew"
+      placeholder: "Neo Geo Pocket · Port · App"
+    validations:
+      required: true
+
+  - type: textarea
+    id: desc_en
+    attributes:
+      label: "Short description in English · Descripción corta en inglés"
+      description: "One or two lines · Una o dos líneas"
+      placeholder: "Neo Geo Pocket and Pocket Color emulator."
+    validations:
+      required: true
+
+  - type: textarea
+    id: desc_es
+    attributes:
+      label: "Short description in Spanish (optional) · Descripción corta en español (opcional)"
+      placeholder: "Emulador de Neo Geo Pocket y Pocket Color."
+
+  - type: dropdown
+    id: firmware
+    attributes:
+      label: "Firmware it works with · Firmware con el que funciona"
+      options:
+        - "v2.0.0-rc1 or later · v2.0.0-rc1 o posterior"
+        - "1.x"
+        - "Both (release for 1.x, pre-release for the RC) · Los dos (release para 1.x, pre-release para la RC)"
+        - "Not sure · No lo sé"
+    validations:
+      required: true
+
+  - type: input
+    id: asset
+    attributes:
+      label: "Release file to download (optional) · Archivo de la release a descargar (opcional)"
+      description: "Only if the release has several files · Solo si la release tiene varios archivos"
+      placeholder: "race-*.zip"
+
+  - type: textarea
+    id: bios
+    attributes:
+      label: "BIOS (optional) · BIOS (opcional)"
+      description: "File names and folder, and whether they are required, optional or included in the zip · Nombres y carpeta, y si son obligatorias, opcionales o vienen en el zip"
+      placeholder: "/bios/ngp/ngp_bios.bin (optional · opcional)"
+
+  - type: dropdown
+    id: data
+    attributes:
+      label: "Game files · Archivos del juego"
+      description: "For ports and homebrews · Para ports y homebrews"
+      options:
+        - "Not needed / included · No necesita / incluidos"
+        - "Needs the original game's files · Necesita los archivos del juego original"
+        - "Needs game files that are free to download · Necesita archivos del juego de descarga gratuita"
+    validations:
+      required: true
+
+  - type: input
+    id: web
+    attributes:
+      label: "Web page (tools only) · Página web (solo herramientas)"
+      placeholder: "https://owner.github.io/tool/"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Anything else · Algo más"
+      description: "Install steps, known issues, a fork of another project… · Pasos de instalación, problemas conocidos, si es fork de otro proyecto…"
