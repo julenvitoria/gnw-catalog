@@ -30,4 +30,5 @@ export default {
   sys_App: "Приложение",
   sys_Web: "Веб",
   release_page: "Открыть релиз",
+  bin_hint_hb: "Кладётся в /homebrews/ на SD-карте.",
 };

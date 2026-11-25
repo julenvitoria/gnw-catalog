@@ -30,4 +30,5 @@ export default {
   sys_App: "앱",
   sys_Web: "웹",
   release_page: "릴리스 보기",
+  bin_hint_hb: "SD 카드의 /homebrews/에 넣으세요.",
 };

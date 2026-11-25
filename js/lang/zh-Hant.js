@@ -30,4 +30,5 @@ export default {
   sys_App: "應用程式",
   sys_Web: "網頁",
   release_page: "查看發布",
+  bin_hint_hb: "放在 SD 卡的 /homebrews/ 中。",
 };

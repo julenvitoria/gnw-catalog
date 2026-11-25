@@ -30,4 +30,5 @@ export default {
   sys_App: "アプリ",
   sys_Web: "Web",
   release_page: "リリースを見る",
+  bin_hint_hb: "SD カードの /homebrews/ に置きます。",
 };

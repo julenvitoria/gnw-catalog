@@ -30,4 +30,5 @@ export default {
   sys_App: "App",
   sys_Web: "Web",
   release_page: "Ver o lançamento",
+  bin_hint_hb: "Vai em /homebrews/ no cartão SD.",
 };

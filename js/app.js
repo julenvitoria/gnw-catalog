@@ -109,7 +109,9 @@ function card(it) {
   c.append(actions);
 
   if (!it.web && v?.file) {
-    c.append(el("p", "item__hint", /\.zip$/i.test(v.file) ? t("zip_hint") : /\.bin$/i.test(v.file) ? t("bin_hint") : ""));
+    // a core's .bin goes in /cores/, a homebrew's in /homebrews/ (the Homebrew tab)
+    const binHint = it.kind === "homebrew" ? t("bin_hint_hb") : t("bin_hint");
+    c.append(el("p", "item__hint", /\.zip$/i.test(v.file) ? t("zip_hint") : /\.bin$/i.test(v.file) ? binHint : ""));
   }
   return c;
 }
