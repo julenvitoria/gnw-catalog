@@ -1,14 +1,21 @@
 #!/usr/bin/env python3
-"""Write versions.json: the latest release of every project in catalog.json.
+"""Write versions.json: the latest releases of every repo in catalog.json.
 
-For each repo: its latest release (or, if it only has pre-releases, the
-newest one), and the file the page should offer for download -- the entry's
-"asset" glob if it has one, else the first .zip, else the first .bin, never a
-file with "debug" in its name. Entries with "web" (a page, not a download)
-are skipped.
+For each repo -- every item, the firmware, and the "upstream" of every fork --
+it records two things:
+
+  release  the newest full release
+  pre      the newest pre-release, only when it is newer than that release
+           (a core whose next version needs the firmware's RC, the RC itself)
+
+each with its version, date, page and the file to offer for download: the
+item's "asset" glob if it has one, else the first .zip, else the first .bin,
+never a file with "debug" in its name. Items with "web" (a page, not a
+download) are skipped.
 
 Runs in .github/workflows/versions.yml with GITHUB_TOKEN; locally it works
-too (set GH_TOKEN for more than 60 requests an hour).
+too (set GH_TOKEN for more than 60 requests an hour). A repo that cannot be
+read keeps its previous entry, so one failure never blanks the rest.
 """
 import fnmatch
 import json
@@ -49,45 +56,60 @@ def pick_asset(assets, pattern):
     return assets[0] if assets else None
 
 
+def describe(rel, pattern):
+    a = pick_asset(rel.get("assets", []), pattern)
+    return {
+        "version": rel["tag_name"],
+        "date": (rel.get("published_at") or "")[:10],
+        "url": rel["html_url"],
+        "file": a["name"] if a else None,
+        "download": a["browser_download_url"] if a else None,
+        "size": a["size"] if a else None,
+    }
+
+
+def releases(repo, pattern):
+    rels = [r for r in (api(f"repos/{repo}/releases?per_page=30") or []) if not r.get("draft")]
+    rels.sort(key=lambda r: r.get("published_at") or "", reverse=True)
+    full = next((r for r in rels if not r.get("prerelease")), None)
+    pre = next((r for r in rels if r.get("prerelease")), None)
+    if pre and full and (pre.get("published_at") or "") <= (full.get("published_at") or ""):
+        pre = None                       # an older pre-release is history, not an option
+    return {"release": describe(full, pattern) if full else None,
+            "pre": describe(pre, pattern) if pre else None}
+
+
 def main():
     with open(os.path.join(ROOT, "catalog.json"), encoding="utf-8") as fh:
-        items = json.load(fh)["items"]
+        cat = json.load(fh)
+    wanted = {}                                      # repo -> asset glob
+    fw = cat.get("firmware")
+    if fw:
+        wanted[fw["repo"]] = fw.get("asset")
+    for it in cat["items"]:
+        if not it.get("web"):
+            wanted[it["repo"]] = it.get("asset")
+        if it.get("upstream"):
+            wanted.setdefault(it["upstream"], it.get("asset"))
+
     path = os.path.join(ROOT, "versions.json")
     try:
         with open(path, encoding="utf-8") as fh:
             previous = json.load(fh)
     except (OSError, ValueError):
         previous = {}
+
     out = {}
-    for it in items:
-        if it.get("web"):
-            continue
-        repo = it["repo"]
+    for repo, pattern in wanted.items():
         try:
-            rel = api(f"repos/{repo}/releases/latest")
-            if rel is None:                  # no full release: the newest pre-release, if any
-                rels = api(f"repos/{repo}/releases?per_page=5") or []
-                rel = next((r for r in rels if not r.get("draft")), None)
+            out[repo] = releases(repo, pattern)
         except (urllib.error.URLError, OSError) as e:
-            # keep what we had for it: one unreachable repo must not blank the rest
             out[repo] = previous.get(repo)
             print(f"{repo}: {e} (kept the previous entry)", file=sys.stderr)
             continue
-        if rel is None:
-            out[repo] = None
-            print(f"{repo}: no release", file=sys.stderr)
-            continue
-        a = pick_asset(rel.get("assets", []), it.get("asset"))
-        out[repo] = {
-            "version": rel["tag_name"],
-            "date": (rel.get("published_at") or "")[:10],
-            "prerelease": bool(rel.get("prerelease")),
-            "url": rel["html_url"],
-            "file": a["name"] if a else None,
-            "download": a["browser_download_url"] if a else None,
-            "size": a["size"] if a else None,
-        }
-        print(f"{repo}: {rel['tag_name']} {a['name'] if a else '(no file)'}", file=sys.stderr)
+        r, p = out[repo]["release"], out[repo]["pre"]
+        print(f"{repo}: {r['version'] if r else '-'}{' + pre ' + p['version'] if p else ''}", file=sys.stderr)
+
     with open(path, "w", encoding="utf-8") as fh:
         json.dump(out, fh, ensure_ascii=False, indent=2, sort_keys=True)
         fh.write("\n")

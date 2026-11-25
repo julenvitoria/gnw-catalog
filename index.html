@@ -26,6 +26,23 @@
   </header>
 
   <main class="main">
+    <section class="fw" id="fw" hidden>
+      <div class="fw__text">
+        <h2><span data-i18n="fw_title"></span> <span id="fw-name"></span></h2>
+        <p id="fw-desc"></p>
+        <p class="fw__note" id="fw-note" data-i18n="fw_note" hidden></p>
+      </div>
+      <div class="fw__dl">
+        <a class="fwbtn" id="fw-rel" target="_blank" rel="noopener" hidden>
+          <small data-i18n="fw_official"></small><strong></strong><em></em>
+        </a>
+        <a class="fwbtn fwbtn--rc" id="fw-pre" target="_blank" rel="noopener" hidden>
+          <small data-i18n="fw_rc"></small><strong></strong><em></em>
+        </a>
+        <p class="muted small fw__hint" data-i18n="fw_assets"></p>
+      </div>
+    </section>
+
     <div class="bar">
       <input id="q" type="search" autocomplete="off" spellcheck="false" data-i18n-ph="search_ph">
       <div class="chips" role="radiogroup">

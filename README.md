@@ -13,10 +13,15 @@ download link to each project's latest release.
 - `catalog.json` lists the projects, edited by hand: repo, name, kind (`core`,
   `homebrew` or `tool`), system, description (English and Spanish; other
   languages show the English one), and optionally `asset` (a glob of the
-  release file to offer) or `web` (a page to open instead of a download).
+  release file to offer) or `web` (a page to open instead of a download),
+  `upstream` (for a fork: the original repo, whose version is shown beside it)
+  and `data` (`own` = needs the original game's files, `free` = needs free
+  game files). The `firmware` entry at the top is shown as its own panel.
 - `.github/workflows/versions.yml` runs every 8 hours (and whenever
   `catalog.json` changes): `tools/update_versions.py` reads each project's
-  latest release and writes `versions.json` (version, date, download link). The
+  latest full release, plus its newest pre-release when that one is newer (the
+  firmware's RC, or a core that needs it), and writes `versions.json`
+  (version, date, download link). The
   page reads that file, so it never has to ask GitHub on every visit.
 - To refresh at once: Actions → Versions → Run workflow.
 

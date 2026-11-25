@@ -1,5 +1,13 @@
 {
-  "_comment": "One entry per project. kind: core | homebrew | tool. asset: glob of the release file to offer (default: the first .zip, else .bin, never a 'debug' one). web: a page to open instead of a download. versions.json is written by .github/workflows/versions.yml.",
+  "_comment": "One entry per project. kind: core | homebrew | tool. asset: glob of the release file to offer (default: the first .zip, else .bin, never a 'debug' one). web: a page to open instead of a download. upstream: the repo this one is a fork of (its version is shown next to it). data: 'own' = needs the original game's files, 'free' = needs game files that are free to download. versions.json is written by .github/workflows/versions.yml.",
+  "firmware": {
+    "repo": "sylverb/game-and-watch-retro-go-sd",
+    "name": "Retro-Go SD",
+    "desc": {
+      "en": "The firmware that runs everything in this catalog from the SD card.",
+      "es": "El firmware que ejecuta todo lo de este catálogo desde la tarjeta SD."
+    }
+  },
   "items": [
     {
       "repo": "julenvitoria/DosAT-retro-go-sd",
@@ -70,6 +78,208 @@
       "desc": {
         "en": "Makes the disk images and .cfg files for DosAT and DosXT, in your browser.",
         "es": "Crea las imágenes de disco y los .cfg de DosAT y DosXT, en tu navegador."
+      }
+    },
+    {
+      "repo": "Macs75/pico8_gnw_distro",
+      "name": "PICO-8",
+      "kind": "core",
+      "system": "PICO-8",
+      "desc": {
+        "en": "PICO-8 engine: runs .p8 and .p8.png cartridges.",
+        "es": "Motor de PICO-8: ejecuta cartuchos .p8 y .p8.png."
+      }
+    },
+    {
+      "repo": "Macs75/gba-retro-go-sd",
+      "name": "GBA (gpSP)",
+      "kind": "core",
+      "system": "Game Boy Advance",
+      "upstream": "sylverb/gba-retro-go-sd",
+      "desc": {
+        "en": "Game Boy Advance emulator based on gpSP.",
+        "es": "Emulador de Game Boy Advance basado en gpSP."
+      }
+    },
+    {
+      "repo": "Macs75/snes-retro-go-sd",
+      "name": "SNES (LakeSnes)",
+      "kind": "core",
+      "system": "Super Nintendo",
+      "upstream": "sylverb/snes-retro-go-sd",
+      "desc": {
+        "en": "Super Nintendo emulator based on LakeSnes.",
+        "es": "Emulador de Super Nintendo basado en LakeSnes."
+      }
+    },
+    {
+      "repo": "Macs75/gngeo-retro-go-sd",
+      "name": "GnGeo",
+      "kind": "core",
+      "system": "Neo Geo",
+      "upstream": "sylverb/gngeo-retro-go-sd",
+      "desc": {
+        "en": "Neo Geo AES/MVS emulator.",
+        "es": "Emulador de Neo Geo AES/MVS."
+      }
+    },
+    {
+      "repo": "landsat77/music-player-gnw",
+      "name": "Music Player",
+      "kind": "homebrew",
+      "system": "App",
+      "desc": {
+        "en": "Music player for the SD card's music.",
+        "es": "Reproductor de la música de la tarjeta SD."
+      }
+    },
+    {
+      "repo": "landsat77/sdbench-gnw",
+      "name": "SD Bench",
+      "kind": "homebrew",
+      "system": "App",
+      "desc": {
+        "en": "Measures how fast your SD card reads and writes, with a live chart.",
+        "es": "Mide la velocidad de lectura y escritura de tu tarjeta SD, con una gráfica en directo."
+      }
+    },
+    {
+      "repo": "landsat77/tyrian-gnw",
+      "name": "Tyrian",
+      "kind": "homebrew",
+      "system": "Port",
+      "data": "free",
+      "desc": {
+        "en": "Epic MegaGames' Tyrian (1995), on the OpenTyrian engine.",
+        "es": "Tyrian de Epic MegaGames (1995), con el motor OpenTyrian."
+      }
+    },
+    {
+      "repo": "landsat77/crs68k-gnw",
+      "name": "Cho Ren Sha 68k",
+      "kind": "homebrew",
+      "system": "Port",
+      "desc": {
+        "en": "Cho Ren Sha 68k, the X68000 vertical shoot 'em up.",
+        "es": "Cho Ren Sha 68k, el shoot 'em up vertical de X68000."
+      }
+    },
+    {
+      "repo": "landsat77/prince-of-persia-gnw",
+      "name": "Prince of Persia",
+      "kind": "homebrew",
+      "system": "Port",
+      "data": "own",
+      "desc": {
+        "en": "Prince of Persia, the 1989/1990 DOS version.",
+        "es": "Prince of Persia, la versión de DOS de 1989/1990."
+      }
+    },
+    {
+      "repo": "landsat77/another-world-gnw",
+      "name": "Another World",
+      "kind": "homebrew",
+      "system": "Port",
+      "data": "own",
+      "desc": {
+        "en": "Eric Chahi's Another World (1991), PC DOS version.",
+        "es": "Another World de Eric Chahi (1991), versión de PC DOS."
+      }
+    },
+    {
+      "repo": "landsat77/jazz-jackrabbit-gnw",
+      "name": "Jazz Jackrabbit",
+      "kind": "homebrew",
+      "system": "Port",
+      "data": "own",
+      "desc": {
+        "en": "Epic MegaGames' Jazz Jackrabbit (1994), DOS version.",
+        "es": "Jazz Jackrabbit de Epic MegaGames (1994), versión de DOS."
+      }
+    },
+    {
+      "repo": "landsat77/second-reality-gnw",
+      "name": "Second Reality",
+      "kind": "homebrew",
+      "system": "Demo",
+      "desc": {
+        "en": "Future Crew's Second Reality demo (Assembly 1993).",
+        "es": "La demo Second Reality de Future Crew (Assembly 1993)."
+      }
+    },
+    {
+      "repo": "landsat77/heart-of-darkness-gnw",
+      "name": "Heart of Darkness",
+      "kind": "homebrew",
+      "system": "Port",
+      "data": "own",
+      "desc": {
+        "en": "Heart of Darkness (Amazing Studio, 1998).",
+        "es": "Heart of Darkness (Amazing Studio, 1998)."
+      }
+    },
+    {
+      "repo": "landsat77/rick-dangerous-gnw",
+      "name": "Rick Dangerous",
+      "kind": "homebrew",
+      "system": "Port",
+      "desc": {
+        "en": "Rick Dangerous (Core Design, 1989), on the xrick engine.",
+        "es": "Rick Dangerous (Core Design, 1989), con el motor xrick."
+      }
+    },
+    {
+      "repo": "landsat77/vvvvvv-gnw",
+      "name": "VVVVVV",
+      "kind": "homebrew",
+      "system": "Port",
+      "data": "own",
+      "desc": {
+        "en": "Terry Cavanagh's VVVVVV (2.4.2).",
+        "es": "VVVVVV de Terry Cavanagh (2.4.2)."
+      }
+    },
+    {
+      "repo": "landsat77/flashback-gnw",
+      "name": "Flashback",
+      "kind": "homebrew",
+      "system": "Port",
+      "data": "own",
+      "desc": {
+        "en": "Delphine Software's Flashback (1992), PC DOS version.",
+        "es": "Flashback de Delphine Software (1992), versión de PC DOS."
+      }
+    },
+    {
+      "repo": "landsat77/wolf3d-gnw",
+      "name": "Wolfenstein 3D",
+      "kind": "homebrew",
+      "system": "Port",
+      "data": "own",
+      "desc": {
+        "en": "id Software's Wolfenstein 3D (1992), on the Wolf4SDL engine.",
+        "es": "Wolfenstein 3D de id Software (1992), con el motor Wolf4SDL."
+      }
+    },
+    {
+      "repo": "osirisad/retro-go-bart-simpsons-cupcake-crisis",
+      "name": "Bart Simpson's Cupcake Crisis",
+      "kind": "homebrew",
+      "system": "Port",
+      "desc": {
+        "en": "C port of the 1990 Acclaim LCD handheld.",
+        "es": "Port en C de la maquinita LCD de Acclaim de 1990."
+      }
+    },
+    {
+      "repo": "sylverb/CoverStudio",
+      "name": "CoverStudio",
+      "kind": "tool",
+      "system": "Web",
+      "web": "https://sylverb.github.io/CoverStudio/?target=gw",
+      "desc": {
+        "en": "Finds cover art on ScreenScraper and converts it to the Game & Watch format.",
+        "es": "Busca carátulas en ScreenScraper y las convierte al formato de la Game & Watch."
       }
     }
   ]

@@ -3,7 +3,7 @@
 import { LANGS, initialLang, saveLang, setLang, lang, t, applyTexts, fmtSize } from "./i18n.js";
 
 const $ = (id) => document.getElementById(id);
-const state = { items: [], versions: {}, kind: "all", q: "" };
+const state = { items: [], firmware: null, versions: {}, kind: "all", q: "" };
 
 // ------------------------------------------------------------ language
 const langSel = $("lang");
@@ -34,16 +34,27 @@ Promise.all([
   fetch("versions.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
 ]).then(([cat, ver]) => {
   state.items = cat.items;
+  state.firmware = cat.firmware || null;
   state.versions = ver || {};
   render();
 });
+
+// versions.json entry for a repo: { release, pre } (pre = a newer pre-release).
+// The first versions of the file had the release fields flat; read both.
+function vers(repo) {
+  const v = state.versions[repo];
+  if (v === undefined) return undefined;            // not checked yet
+  if (v === null) return { release: null, pre: null };
+  if ("release" in v || "pre" in v) return { release: v.release || null, pre: v.pre || null };
+  return { release: v, pre: null };
+}
 
 // A description in the page's language, else English, else Spanish.
 function desc(it) {
   const d = it.desc || {};
   return d[lang()] || d[lang().slice(0, 2)] || d.en || d.es || "";
 }
-const sysLabel = (s) => (["Port", "App", "Web"].includes(s) ? t(`sys_${s}`) : s);
+const sysLabel = (s) => (["Port", "App", "Web", "Demo"].includes(s) ? t(`sys_${s}`) : s);
 const owner = (it) => it.repo.split("/")[0];
 const norm = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
@@ -61,8 +72,17 @@ function el(tag, cls, text) {
   return e;
 }
 
+function relLine(r, cls) {
+  const p = el("p", `item__rel ${cls || ""}`);
+  const a = el("a", "", r.version);
+  a.href = r.url; a.title = t("release_page"); a.target = "_blank"; a.rel = "noopener";
+  p.append(a, document.createTextNode(` · ${fmtDate(r.date)}`));
+  if (r.file) p.append(el("span", "item__file", ` · ${r.file}${r.size ? ` (${fmtSize(r.size)})` : ""}`));
+  return p;
+}
+
 function card(it) {
-  const v = state.versions[it.repo];
+  const v = vers(it.repo);
   const c = el("article", `item item--${it.kind}`);
   const head = el("div", "item__head");
   head.append(el("h2", "item__name", it.name), el("span", `badge badge--${it.kind}`, t(`kind_${it.kind}`)));
@@ -72,31 +92,53 @@ function card(it) {
   by.href = `https://github.com/${owner(it)}`;
   meta.append(by);
   c.append(head, meta, el("p", "item__desc", desc(it)));
+  if (it.data) c.append(el("p", "item__data", t(it.data === "free" ? "data_free" : "data_own")));
 
-  const rel = el("p", "item__rel");
+  // releases: the full one, and a newer pre-release when there is one
   if (it.web) {
-    rel.textContent = t("web_hint");
+    c.append(el("p", "item__rel", t("web_hint")));
   } else if (v) {
-    const a = el("a", "", v.version);
-    a.href = v.url;
-    a.title = t("release_page");
-    rel.append(a, document.createTextNode(` · ${fmtDate(v.date)}`));
-    if (v.prerelease) rel.append(" ", el("span", "pre", t("prerelease")));
-    if (v.file) rel.append(el("span", "item__file", ` · ${v.file}${v.size ? ` (${fmtSize(v.size)})` : ""}`));
-  } else if (v === null) {
-    rel.textContent = t("no_release");
+    if (v.release) c.append(relLine(v.release));
+    if (v.pre) {
+      const p = relLine(v.pre, "item__rel--pre");
+      p.prepend(el("span", "pre", t("prerelease")), " ");
+      c.append(p);
+    }
+    if (!v.release && !v.pre) c.append(el("p", "item__rel", t("no_release")));
   }
-  c.append(rel);
+
+  // a fork: how its original is doing
+  if (it.upstream) {
+    const u = vers(it.upstream);
+    const up = el("p", "item__up");
+    const a = el("a", "", t("fork_of", { r: it.upstream }));
+    a.href = `https://github.com/${it.upstream}`; a.target = "_blank"; a.rel = "noopener";
+    up.append(a);
+    const ur = u && (u.pre || u.release);
+    if (ur) {
+      up.append(document.createTextNode(` · ${t("original")}: ${ur.version} · ${fmtDate(ur.date)}`));
+      const mine = v && (v.pre || v.release);
+      if (mine && mine.date > ur.date) up.append(" ", el("span", "ahead", t("ahead")));
+    }
+    c.append(up);
+  }
 
   const actions = el("div", "item__actions");
   if (it.web) {
     const a = el("a", "btn btn--go", t("open"));
     a.href = it.web; a.target = "_blank"; a.rel = "noopener";
     actions.append(a);
-  } else if (v?.download) {
-    const a = el("a", "btn btn--go", t("download"));
-    a.href = v.download;
-    actions.append(a);
+  } else if (v) {
+    if (v.release?.download) {
+      const a = el("a", "btn btn--go", v.pre ? t("dl_stable", { v: v.release.version }) : t("download"));
+      a.href = v.release.download;
+      actions.append(a);
+    }
+    if (v.pre?.download) {
+      const a = el("a", "btn btn--pre", t("dl_pre", { v: v.pre.version }));
+      a.href = v.pre.download;
+      actions.append(a);
+    }
   }
   const code = el("a", "btn", t("repo"));
   code.href = `https://github.com/${it.repo}`; code.target = "_blank"; code.rel = "noopener";
@@ -108,17 +150,40 @@ function card(it) {
   }
   c.append(actions);
 
-  if (!it.web && v?.file) {
+  const file = v && (v.release || v.pre)?.file;
+  if (!it.web && file) {
     // a core's .bin goes in /cores/, a homebrew's in /homebrews/ (the Homebrew tab)
     const binHint = it.kind === "homebrew" ? t("bin_hint_hb") : t("bin_hint");
-    c.append(el("p", "item__hint", /\.zip$/i.test(v.file) ? t("zip_hint") : /\.bin$/i.test(v.file) ? binHint : ""));
+    c.append(el("p", "item__hint", /\.zip$/i.test(file) ? t("zip_hint") : /\.bin$/i.test(file) ? binHint : ""));
   }
   return c;
+}
+
+// ------------------------------------------------------------ firmware
+function fwButton(id, r) {
+  const a = $(id);
+  a.hidden = !r;
+  if (!r) return;
+  a.href = r.url;
+  a.querySelector("strong").textContent = r.version;
+  a.querySelector("em").textContent = fmtDate(r.date);
+}
+function renderFirmware() {
+  const fw = state.firmware;
+  $("fw").hidden = !fw;
+  if (!fw) return;
+  const v = vers(fw.repo) || { release: null, pre: null };
+  $("fw-name").textContent = fw.name;
+  $("fw-desc").textContent = desc(fw);
+  fwButton("fw-rel", v.release);
+  fwButton("fw-pre", v.pre);
+  $("fw-note").hidden = !v.pre;
 }
 
 const ORDER = { core: 0, homebrew: 1, tool: 2 };
 function render() {
   if (!state.items.length) return;
+  renderFirmware();
   const q = norm(state.q.trim());
   const match = (it) => !q || norm([it.name, it.system, owner(it), desc(it), it.repo].join(" ")).includes(q);
   const searched = state.items.filter(match);

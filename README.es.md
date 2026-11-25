@@ -14,10 +14,14 @@ enlace de descarga a la última versión de cada proyecto.
   tipo (`core`, `homebrew` o `tool`), sistema, descripción (en inglés y en
   español; los demás idiomas muestran la inglesa) y, si hace falta, `asset`
   (el patrón del archivo de la release que se ofrece) o `web` (una página que
-  se abre en lugar de una descarga).
+  se abre en lugar de una descarga), `upstream` (en un fork: el repo original,
+  cuya versión se muestra al lado) y `data` (`own` = necesita los archivos del
+  juego original, `free` = necesita archivos gratuitos). La ficha `firmware`
+  de arriba se muestra como un panel aparte.
 - `.github/workflows/versions.yml` se ejecuta cada 8 horas (y cada vez que
   cambia `catalog.json`): `tools/update_versions.py` consulta la última release
-  de cada proyecto y escribe `versions.json` (versión, fecha y enlace de
+  de cada proyecto, y también la previa más reciente si es más nueva (la RC del
+  firmware, o un core que la necesita), y escribe `versions.json` (versión, fecha y enlace de
   descarga). La página lee ese archivo, así que no consulta a GitHub en cada
   visita.
 - Para actualizarlo al momento: Actions → Versions → Run workflow.
