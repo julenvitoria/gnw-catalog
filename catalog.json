@@ -1,0 +1,76 @@
+{
+  "_comment": "One entry per project. kind: core | homebrew | tool. asset: glob of the release file to offer (default: the first .zip, else .bin, never a 'debug' one). web: a page to open instead of a download. versions.json is written by .github/workflows/versions.yml.",
+  "items": [
+    {
+      "repo": "julenvitoria/DosAT-retro-go-sd",
+      "name": "DosAT",
+      "kind": "core",
+      "system": "MS-DOS (386, VGA)",
+      "asset": "dosat.bin",
+      "desc": {
+        "en": "MS-DOS PC emulator: 386, VGA, Sound Blaster and AdLib, with save states.",
+        "es": "Emulador de PC con MS-DOS: 386, VGA, Sound Blaster y AdLib, con partidas guardadas."
+      },
+      "extra": {
+        "url": "https://julenvitoria.github.io/dos-gnw-imager/",
+        "label": "imager"
+      }
+    },
+    {
+      "repo": "julenvitoria/DosXT-retro-go-sd",
+      "name": "DosXT",
+      "kind": "core",
+      "system": "MS-DOS (PC XT, CGA/EGA)",
+      "asset": "dosxt.bin",
+      "desc": {
+        "en": "PC XT emulator (8088, CGA/EGA, AdLib) for older DOS games; boots your own MS-DOS.",
+        "es": "Emulador de PC XT (8088, CGA/EGA, AdLib) para juegos de DOS más antiguos; arranca tu propio MS-DOS."
+      },
+      "extra": {
+        "url": "https://julenvitoria.github.io/dos-gnw-imager/",
+        "label": "imager"
+      }
+    },
+    {
+      "repo": "julenvitoria/scummvm-retro-go-sd",
+      "name": "ScummVM",
+      "kind": "core",
+      "system": "ScummVM",
+      "desc": {
+        "en": "ScummVM: LucasArts, Sierra and other classic adventure games.",
+        "es": "ScummVM: aventuras clásicas de LucasArts, Sierra y otros."
+      }
+    },
+    {
+      "repo": "julenvitoria/cannonball-retro-go-sd",
+      "name": "Cannonball",
+      "kind": "homebrew",
+      "system": "Port",
+      "desc": {
+        "en": "Cannonball, the enhanced OutRun engine (needs the arcade ROMs).",
+        "es": "Cannonball, el motor mejorado de OutRun (necesita las ROM de la recreativa)."
+      }
+    },
+    {
+      "repo": "julenvitoria/filemanager-retro-go-sd",
+      "name": "File Manager",
+      "kind": "homebrew",
+      "system": "App",
+      "desc": {
+        "en": "Browse the SD card from the console: copy, move, rename, delete, view and edit files.",
+        "es": "Maneja la SD desde la consola: copiar, mover, renombrar, borrar, ver y editar archivos."
+      }
+    },
+    {
+      "repo": "julenvitoria/dos-gnw-imager",
+      "name": "DOS G&W Imager",
+      "kind": "tool",
+      "system": "Web",
+      "web": "https://julenvitoria.github.io/dos-gnw-imager/",
+      "desc": {
+        "en": "Makes the disk images and .cfg files for DosAT and DosXT, in your browser.",
+        "es": "Crea las imágenes de disco y los .cfg de DosAT y DosXT, en tu navegador."
+      }
+    }
+  ]
+}

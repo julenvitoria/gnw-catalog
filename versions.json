@@ -1,0 +1,23 @@
+{
+  "julenvitoria/DosAT-retro-go-sd": {
+    "date": "2026-11-21",
+    "download": "https://github.com/julenvitoria/DosAT-retro-go-sd/releases/download/v0.0.6/dosat.bin",
+    "file": "dosat.bin",
+    "prerelease": false,
+    "size": 170200,
+    "url": "https://github.com/julenvitoria/DosAT-retro-go-sd/releases/tag/v0.0.6",
+    "version": "v0.0.6"
+  },
+  "julenvitoria/DosXT-retro-go-sd": {
+    "date": "2026-11-09",
+    "download": "https://github.com/julenvitoria/DosXT-retro-go-sd/releases/download/v0.0.2/dosxt.bin",
+    "file": "dosxt.bin",
+    "prerelease": false,
+    "size": 132404,
+    "url": "https://github.com/julenvitoria/DosXT-retro-go-sd/releases/tag/v0.0.2",
+    "version": "v0.0.2"
+  },
+  "julenvitoria/cannonball-retro-go-sd": null,
+  "julenvitoria/filemanager-retro-go-sd": null,
+  "julenvitoria/scummvm-retro-go-sd": null
+}
