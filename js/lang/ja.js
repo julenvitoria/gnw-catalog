@@ -54,4 +54,5 @@ export default {
   official: "公式",
   in_installer: "ファームウェアのインストーラーに含まれています。",
   bios_inc: "BIOS 同梱",
+  officials: "公式",
 };

@@ -54,4 +54,5 @@ export default {
   official: "Oficial",
   in_installer: "Incluido en el instalador del firmware.",
   bios_inc: "BIOS incluida",
+  officials: "Oficiales",
 };

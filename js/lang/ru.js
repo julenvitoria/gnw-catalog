@@ -54,4 +54,5 @@ export default {
   official: "Официальный",
   in_installer: "Входит в установщик прошивки.",
   bios_inc: "BIOS в комплекте",
+  officials: "Официальные",
 };

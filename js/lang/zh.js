@@ -54,4 +54,5 @@ export default {
   official: "官方",
   in_installer: "已包含在固件的安装程序中。",
   bios_inc: "已附带 BIOS",
+  officials: "官方",
 };

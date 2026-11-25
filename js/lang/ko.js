@@ -54,4 +54,5 @@ export default {
   official: "공식",
   in_installer: "펌웨어 설치 프로그램에 포함되어 있습니다.",
   bios_inc: "BIOS 포함",
+  officials: "공식",
 };

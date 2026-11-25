@@ -18,7 +18,7 @@ langSel.addEventListener("change", () => { saveLang(langSel.value); useLang(lang
 
 // ------------------------------------------------------------ filters
 const KIND_KEY = "gnw-catalog.kind";
-try { const k = localStorage.getItem(KIND_KEY); if (["all", "core", "homebrew", "tool"].includes(k)) state.kind = k; } catch { /* default */ }
+try { const k = localStorage.getItem(KIND_KEY); if (["all", "official", "core", "homebrew", "tool"].includes(k)) state.kind = k; } catch { /* default */ }
 for (const chip of document.querySelectorAll("[data-kind]")) {
   chip.addEventListener("click", () => {
     state.kind = chip.dataset.kind;
@@ -217,12 +217,13 @@ function render() {
   const q = norm(state.q.trim());
   const match = (it) => !q || norm([it.name, it.system, owner(it), desc(it), it.repo].join(" ")).includes(q);
   const searched = state.items.filter(match);
+  const inKind = (it, k) => k === "all" || (k === "official" ? !!it.official : it.kind === k);
   for (const chip of document.querySelectorAll("[data-kind]")) {
     const k = chip.dataset.kind;
     chip.setAttribute("aria-checked", String(k === state.kind));
-    chip.querySelector("b").textContent = searched.filter((it) => k === "all" || it.kind === k).length;
+    chip.querySelector("b").textContent = searched.filter((it) => inKind(it, k)).length;
   }
-  const shown = searched.filter((it) => state.kind === "all" || it.kind === state.kind)
+  const shown = searched.filter((it) => inKind(it, state.kind))
     .sort((a, b) => ORDER[a.kind] - ORDER[b.kind] || a.name.localeCompare(b.name) || !!b.official - !!a.official);
   const grid = $("grid");
   grid.textContent = "";
