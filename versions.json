@@ -116,6 +116,35 @@
       "version": "v0.0.9"
     }
   },
+  "_installer": [
+    "sylverb/LCD-Game-Emulator-retro-go-sd",
+    "sylverb/NXEngine-retro-go-sd",
+    "sylverb/PokeMini-retro-go-sd",
+    "sylverb/SMSPlusGX-retro-go-sd",
+    "sylverb/blueMSX-retro-go-sd",
+    "sylverb/caprice32-retro-go-sd",
+    "sylverb/ccleste-retro-go-sd",
+    "sylverb/doom-retro-go-sd",
+    "sylverb/fceumm-retro-go-sd",
+    "sylverb/gba-retro-go-sd",
+    "sylverb/gngeo-retro-go-sd",
+    "sylverb/gwenesis-retro-go-sd",
+    "sylverb/lynx-retro-go-sd",
+    "sylverb/mine-sweeper-retro-go-sd",
+    "sylverb/o2em-retro-go-sd",
+    "sylverb/pce-go-retro-go-sd",
+    "sylverb/pong-retro-go-sd",
+    "sylverb/potator-retro-go-sd",
+    "sylverb/prosystem-retro-go-sd",
+    "sylverb/race-retro-go-sd",
+    "sylverb/smw-retro-go-sd",
+    "sylverb/snake-retro-go-sd",
+    "sylverb/snes-retro-go-sd",
+    "sylverb/stella2014-retro-go-sd",
+    "sylverb/tama-retro-go-sd",
+    "sylverb/tgb-dual-retro-go-sd",
+    "sylverb/zelda3-retro-go-sd"
+  ],
   "dadagm/GameWatchMusicPlayer": {
     "pre": null,
     "release": {
@@ -379,6 +408,248 @@
       "version": "v1.3.1"
     }
   },
+  "sylverb/LCD-Game-Emulator-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-25",
+      "download": "https://github.com/sylverb/LCD-Game-Emulator-retro-go-sd/releases/download/v0.0.3/LCD-Game-Emulator-v0.0.3.zip",
+      "file": "LCD-Game-Emulator-v0.0.3.zip",
+      "info": {
+        "abi": 2,
+        "core": "LCD-Game-Emulator",
+        "header": 3,
+        "systems": [
+          {
+            "dir": "gw",
+            "ext": [
+              "gw"
+            ],
+            "name": "Game & Watch"
+          }
+        ]
+      },
+      "size": 13837,
+      "url": "https://github.com/sylverb/LCD-Game-Emulator-retro-go-sd/releases/tag/v0.0.3",
+      "version": "v0.0.3"
+    }
+  },
+  "sylverb/NXEngine-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-10-10",
+      "download": "https://github.com/sylverb/NXEngine-retro-go-sd/releases/download/v1.0.3/CaveStory_en-v1.0.3.zip",
+      "file": "CaveStory_en-v1.0.3.zip",
+      "size": 1323418,
+      "url": "https://github.com/sylverb/NXEngine-retro-go-sd/releases/tag/v1.0.3",
+      "version": "v1.0.3"
+    }
+  },
+  "sylverb/PokeMini-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-06",
+      "download": "https://github.com/sylverb/PokeMini-retro-go-sd/releases/download/v0.0.1/PokeMini-v0.0.1.zip",
+      "file": "PokeMini-v0.0.1.zip",
+      "info": {
+        "abi": 2,
+        "core": "PokeMini",
+        "header": 3,
+        "systems": [
+          {
+            "dir": "mini",
+            "ext": [
+              "min"
+            ],
+            "name": "Pokémon Mini"
+          }
+        ]
+      },
+      "size": 34057,
+      "url": "https://github.com/sylverb/PokeMini-retro-go-sd/releases/tag/v0.0.1",
+      "version": "v0.0.1"
+    }
+  },
+  "sylverb/SMSPlusGX-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-14",
+      "download": "https://github.com/sylverb/SMSPlusGX-retro-go-sd/releases/download/v0.0.3/SmsPlusGX-v0.0.3.zip",
+      "file": "SmsPlusGX-v0.0.3.zip",
+      "info": {
+        "abi": 2,
+        "core": "SMSPlus GX",
+        "header": 3,
+        "systems": [
+          {
+            "dir": "sms",
+            "ext": [
+              "sms"
+            ],
+            "name": "Sega Master System"
+          },
+          {
+            "dir": "gg",
+            "ext": [
+              "gg"
+            ],
+            "name": "Sega Game Gear"
+          },
+          {
+            "dir": "sg",
+            "ext": [
+              "sg"
+            ],
+            "name": "Sega SG-1000"
+          },
+          {
+            "dir": "col",
+            "ext": [
+              "col"
+            ],
+            "name": "Colecovision"
+          }
+        ]
+      },
+      "size": 49765,
+      "url": "https://github.com/sylverb/SMSPlusGX-retro-go-sd/releases/tag/v0.0.3",
+      "version": "v0.0.3"
+    }
+  },
+  "sylverb/blueMSX-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-15",
+      "download": "https://github.com/sylverb/blueMSX-retro-go-sd/releases/download/v0.0.1/blueMSX-v0.0.1.zip",
+      "file": "blueMSX-v0.0.1.zip",
+      "info": {
+        "abi": 2,
+        "core": "blueMSX",
+        "header": 3,
+        "systems": [
+          {
+            "cheat": "mcf",
+            "dir": "msx",
+            "ext": [
+              "dsk",
+              "rom",
+              "mx1",
+              "mx2",
+              "cdk",
+              "lzma"
+            ],
+            "name": "MSX"
+          }
+        ]
+      },
+      "size": 352696,
+      "url": "https://github.com/sylverb/blueMSX-retro-go-sd/releases/tag/v0.0.1",
+      "version": "v0.0.1"
+    }
+  },
+  "sylverb/caprice32-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-08-31",
+      "download": "https://github.com/sylverb/caprice32-retro-go-sd/releases/download/v0.0.1/caprice32-v0.0.1.zip",
+      "file": "caprice32-v0.0.1.zip",
+      "info": {
+        "abi": 2,
+        "core": "Caprice32",
+        "header": 3,
+        "systems": [
+          {
+            "dir": "amstrad",
+            "ext": [
+              "dsk",
+              "cdk"
+            ],
+            "name": "Amstrad CPC"
+          }
+        ]
+      },
+      "size": 83803,
+      "url": "https://github.com/sylverb/caprice32-retro-go-sd/releases/tag/v0.0.1",
+      "version": "v0.0.1"
+    }
+  },
+  "sylverb/ccleste-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-15",
+      "download": "https://github.com/sylverb/ccleste-retro-go-sd/releases/download/v0.0.2/Celeste-v0.0.2.zip",
+      "file": "Celeste-v0.0.2.zip",
+      "size": 28896,
+      "url": "https://github.com/sylverb/ccleste-retro-go-sd/releases/tag/v0.0.2",
+      "version": "v0.0.2"
+    }
+  },
+  "sylverb/doom-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-11",
+      "download": "https://github.com/sylverb/doom-retro-go-sd/releases/download/v0.0.1/doom-v0.0.1.zip",
+      "file": "doom-v0.0.1.zip",
+      "info": {
+        "abi": 2,
+        "core": "Doom",
+        "header": 3,
+        "systems": [
+          {
+            "dir": "doom",
+            "ext": [
+              "whd"
+            ],
+            "name": "Doom"
+          }
+        ]
+      },
+      "size": 200706,
+      "url": "https://github.com/sylverb/doom-retro-go-sd/releases/tag/v0.0.1",
+      "version": "v0.0.1"
+    }
+  },
+  "sylverb/durak-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-11",
+      "download": "https://github.com/sylverb/durak-retro-go-sd/releases/download/v0.0.1/Duren-v0.0.1.zip",
+      "file": "Duren-v0.0.1.zip",
+      "size": 2865375,
+      "url": "https://github.com/sylverb/durak-retro-go-sd/releases/tag/v0.0.1",
+      "version": "v0.0.1"
+    }
+  },
+  "sylverb/fceumm-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-10-03",
+      "download": "https://github.com/sylverb/fceumm-retro-go-sd/releases/download/v0.0.6/fceumm-v0.0.6.zip",
+      "file": "fceumm-v0.0.6.zip",
+      "info": {
+        "abi": 2,
+        "core": "FCEUmm",
+        "header": 3,
+        "systems": [
+          {
+            "cheat": "ggcodes",
+            "dir": "nes",
+            "ext": [
+              "nes",
+              "ines",
+              "fds",
+              "nsf",
+              "unf",
+              "unif"
+            ],
+            "name": "Nintendo Entertainment System"
+          }
+        ]
+      },
+      "size": 196610,
+      "url": "https://github.com/sylverb/fceumm-retro-go-sd/releases/tag/v0.0.6",
+      "version": "v0.0.6"
+    }
+  },
   "sylverb/game-and-watch-retro-go-sd": {
     "pre": {
       "date": "2026-11-24",
@@ -403,6 +674,21 @@
       "date": "2026-08-21",
       "download": "https://github.com/sylverb/gba-retro-go-sd/releases/download/v0.0.1/gba-v0.0.1.zip",
       "file": "gba-v0.0.1.zip",
+      "info": {
+        "abi": 2,
+        "core": "gpSP",
+        "header": 3,
+        "systems": [
+          {
+            "cheat": "ggcodes",
+            "dir": "gba",
+            "ext": [
+              "gba"
+            ],
+            "name": "Nintendo Gameboy Advance"
+          }
+        ]
+      },
       "size": 175608,
       "url": "https://github.com/sylverb/gba-retro-go-sd/releases/tag/v0.0.1",
       "version": "v0.0.1"
@@ -414,9 +700,279 @@
       "date": "2026-10-04",
       "download": "https://github.com/sylverb/gngeo-retro-go-sd/releases/download/v0.0.5/gngeo-v0.0.5.zip",
       "file": "gngeo-v0.0.5.zip",
+      "info": {
+        "abi": 2,
+        "core": "Neo Geo",
+        "header": 3,
+        "systems": [
+          {
+            "dir": "neogeo",
+            "ext": [
+              "zip",
+              "gno"
+            ],
+            "name": "Neo Geo"
+          }
+        ]
+      },
       "size": 108534,
       "url": "https://github.com/sylverb/gngeo-retro-go-sd/releases/tag/v0.0.5",
       "version": "v0.0.5"
+    }
+  },
+  "sylverb/gwenesis-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-25",
+      "download": "https://github.com/sylverb/gwenesis-retro-go-sd/releases/download/v0.0.2/gwenesis-v0.0.2.zip",
+      "file": "gwenesis-v0.0.2.zip",
+      "info": {
+        "abi": 2,
+        "core": "Gwenesis",
+        "header": 3,
+        "systems": [
+          {
+            "dir": "md",
+            "ext": [
+              "md",
+              "gen",
+              "bin"
+            ],
+            "name": "Sega Genesis"
+          }
+        ]
+      },
+      "size": 101411,
+      "url": "https://github.com/sylverb/gwenesis-retro-go-sd/releases/tag/v0.0.2",
+      "version": "v0.0.2"
+    }
+  },
+  "sylverb/lynx-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-08-25",
+      "download": "https://github.com/sylverb/lynx-retro-go-sd/releases/download/v0.0.1/lynx-v0.0.1.zip",
+      "file": "lynx-v0.0.1.zip",
+      "info": {
+        "abi": 2,
+        "core": "Handy",
+        "header": 3,
+        "systems": [
+          {
+            "dir": "lynx",
+            "ext": [
+              "lnx",
+              "lyx"
+            ],
+            "name": "Atari Lynx"
+          }
+        ]
+      },
+      "size": 28899,
+      "url": "https://github.com/sylverb/lynx-retro-go-sd/releases/tag/v0.0.1",
+      "version": "v0.0.1"
+    }
+  },
+  "sylverb/mine-sweeper-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-15",
+      "download": "https://github.com/sylverb/mine-sweeper-retro-go-sd/releases/download/v0.0.1/MineSweeper-v0.0.1.zip",
+      "file": "MineSweeper-v0.0.1.zip",
+      "size": 16352,
+      "url": "https://github.com/sylverb/mine-sweeper-retro-go-sd/releases/tag/v0.0.1",
+      "version": "v0.0.1"
+    }
+  },
+  "sylverb/o2em-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-10",
+      "download": "https://github.com/sylverb/o2em-retro-go-sd/releases/download/v0.0.1/o2em-v0.0.1.zip",
+      "file": "o2em-v0.0.1.zip",
+      "info": {
+        "abi": 2,
+        "core": "O2EM",
+        "header": 3,
+        "systems": [
+          {
+            "dir": "videopac",
+            "ext": [
+              "bin"
+            ],
+            "name": "Videopac / Odyssey2"
+          }
+        ]
+      },
+      "size": 18703,
+      "url": "https://github.com/sylverb/o2em-retro-go-sd/releases/tag/v0.0.1",
+      "version": "v0.0.1"
+    }
+  },
+  "sylverb/openlara-retro-go-sd": {
+    "pre": null,
+    "release": null
+  },
+  "sylverb/oswan-retro-go-sd": {
+    "pre": null,
+    "release": null
+  },
+  "sylverb/pce-go-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-10-17",
+      "download": "https://github.com/sylverb/pce-go-retro-go-sd/releases/download/v0.0.3/pce-v0.0.3.zip",
+      "file": "pce-v0.0.3.zip",
+      "info": {
+        "abi": 2,
+        "core": "PCE-GO",
+        "header": 3,
+        "systems": [
+          {
+            "cheat": "pceplus",
+            "dir": "pce",
+            "ext": [
+              "pce"
+            ],
+            "name": "PC Engine"
+          },
+          {
+            "cheat": "pceplus",
+            "dir": "sgx",
+            "ext": [
+              "sgx",
+              "pce"
+            ],
+            "name": "SuperGrafx"
+          },
+          {
+            "cdrom": true,
+            "cheat": "pceplus",
+            "dir": "pcecd",
+            "ext": [
+              "cue",
+              "chd"
+            ],
+            "name": "PC Engine CD"
+          }
+        ]
+      },
+      "size": 128107,
+      "url": "https://github.com/sylverb/pce-go-retro-go-sd/releases/tag/v0.0.3",
+      "version": "v0.0.3"
+    }
+  },
+  "sylverb/pong-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-14",
+      "download": "https://github.com/sylverb/pong-retro-go-sd/releases/download/v0.0.2/Pong-v0.0.2.zip",
+      "file": "Pong-v0.0.2.zip",
+      "size": 13725,
+      "url": "https://github.com/sylverb/pong-retro-go-sd/releases/tag/v0.0.2",
+      "version": "v0.0.2"
+    }
+  },
+  "sylverb/potator-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-06",
+      "download": "https://github.com/sylverb/potator-retro-go-sd/releases/download/v0.0.1/potator-v0.0.1.zip",
+      "file": "potator-v0.0.1.zip",
+      "info": {
+        "abi": 2,
+        "core": "Potator",
+        "header": 3,
+        "systems": [
+          {
+            "dir": "wsv",
+            "ext": [
+              "wsv",
+              "sv",
+              "bin"
+            ],
+            "name": "Watara Supervision"
+          }
+        ]
+      },
+      "size": 11481,
+      "url": "https://github.com/sylverb/potator-retro-go-sd/releases/tag/v0.0.1",
+      "version": "v0.0.1"
+    }
+  },
+  "sylverb/prosystem-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-06",
+      "download": "https://github.com/sylverb/prosystem-retro-go-sd/releases/download/v0.0.1/prosystem-v0.0.1.zip",
+      "file": "prosystem-v0.0.1.zip",
+      "info": {
+        "abi": 2,
+        "core": "ProSystem",
+        "header": 3,
+        "systems": [
+          {
+            "dir": "a7800",
+            "ext": [
+              "a78",
+              "bin"
+            ],
+            "name": "Atari 7800"
+          }
+        ]
+      },
+      "size": 19464,
+      "url": "https://github.com/sylverb/prosystem-retro-go-sd/releases/tag/v0.0.1",
+      "version": "v0.0.1"
+    }
+  },
+  "sylverb/race-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-20",
+      "download": "https://github.com/sylverb/race-retro-go-sd/releases/download/v0.0.1/race-v0.0.1.zip",
+      "file": "race-v0.0.1.zip",
+      "info": {
+        "abi": 2,
+        "core": "RACE",
+        "header": 3,
+        "systems": [
+          {
+            "dir": "ngp",
+            "ext": [
+              "ngp",
+              "ngc",
+              "ngpc"
+            ],
+            "name": "Neo Geo Pocket"
+          }
+        ]
+      },
+      "size": 64280,
+      "url": "https://github.com/sylverb/race-retro-go-sd/releases/tag/v0.0.1",
+      "version": "v0.0.1"
+    }
+  },
+  "sylverb/smw-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-08",
+      "download": "https://github.com/sylverb/smw-retro-go-sd/releases/download/v0.0.1/Super.Mario.World-v0.0.1.zip",
+      "file": "Super.Mario.World-v0.0.1.zip",
+      "size": 244372,
+      "url": "https://github.com/sylverb/smw-retro-go-sd/releases/tag/v0.0.1",
+      "version": "v0.0.1"
+    }
+  },
+  "sylverb/snake-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-15",
+      "download": "https://github.com/sylverb/snake-retro-go-sd/releases/download/v0.0.2/Snake-v0.0.2.zip",
+      "file": "Snake-v0.0.2.zip",
+      "size": 17950,
+      "url": "https://github.com/sylverb/snake-retro-go-sd/releases/tag/v0.0.2",
+      "version": "v0.0.2"
     }
   },
   "sylverb/snes-retro-go-sd": {
@@ -425,9 +981,108 @@
       "date": "2026-09-15",
       "download": "https://github.com/sylverb/snes-retro-go-sd/releases/download/v0.0.5/snes-v0.0.5.zip",
       "file": "snes-v0.0.5.zip",
+      "info": {
+        "abi": 2,
+        "core": "lakesnes",
+        "header": 3,
+        "systems": [
+          {
+            "dir": "snes",
+            "ext": [
+              "sfc",
+              "smc",
+              "fig",
+              "swc"
+            ],
+            "name": "SNES"
+          }
+        ]
+      },
       "size": 101617,
       "url": "https://github.com/sylverb/snes-retro-go-sd/releases/tag/v0.0.5",
       "version": "v0.0.5"
+    }
+  },
+  "sylverb/stella2014-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-06",
+      "download": "https://github.com/sylverb/stella2014-retro-go-sd/releases/download/v0.0.1/stella2014-v0.0.1.zip",
+      "file": "stella2014-v0.0.1.zip",
+      "info": {
+        "abi": 2,
+        "core": "Stella 2014",
+        "header": 3,
+        "systems": [
+          {
+            "dir": "a2600",
+            "ext": [
+              "a26",
+              "bin"
+            ],
+            "name": "Atari 2600"
+          }
+        ]
+      },
+      "size": 131671,
+      "url": "https://github.com/sylverb/stella2014-retro-go-sd/releases/tag/v0.0.1",
+      "version": "v0.0.1"
+    }
+  },
+  "sylverb/tama-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-09",
+      "download": "https://github.com/sylverb/tama-retro-go-sd/releases/download/v0.0.1/TamagotchiP1-v0.0.1.zip",
+      "file": "TamagotchiP1-v0.0.1.zip",
+      "size": 23471,
+      "url": "https://github.com/sylverb/tama-retro-go-sd/releases/tag/v0.0.1",
+      "version": "v0.0.1"
+    }
+  },
+  "sylverb/tgb-dual-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-10-10",
+      "download": "https://github.com/sylverb/tgb-dual-retro-go-sd/releases/download/v0.0.5/tgbdual-v0.0.5.zip",
+      "file": "tgbdual-v0.0.5.zip",
+      "info": {
+        "abi": 2,
+        "core": "TGB Dual",
+        "header": 3,
+        "systems": [
+          {
+            "cheat": "ggcodes",
+            "dir": "gb",
+            "ext": [
+              "gb"
+            ],
+            "name": "Game Boy"
+          },
+          {
+            "cheat": "ggcodes",
+            "dir": "gbc",
+            "ext": [
+              "gbc"
+            ],
+            "name": "Game Boy Color"
+          }
+        ]
+      },
+      "size": 32572,
+      "url": "https://github.com/sylverb/tgb-dual-retro-go-sd/releases/tag/v0.0.5",
+      "version": "v0.0.5"
+    }
+  },
+  "sylverb/zelda3-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-08",
+      "download": "https://github.com/sylverb/zelda3-retro-go-sd/releases/download/v0.0.1/Zelda.3-v0.0.1.zip",
+      "file": "Zelda.3-v0.0.1.zip",
+      "size": 376762,
+      "url": "https://github.com/sylverb/zelda3-retro-go-sd/releases/tag/v0.0.1",
+      "version": "v0.0.1"
     }
   }
 }
