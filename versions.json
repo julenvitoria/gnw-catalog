@@ -1,47 +1,313 @@
 {
+  "Macs75/gba-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-11-22",
+      "download": "https://github.com/Macs75/gba-retro-go-sd/releases/download/v0.1.0/gba-v0.1.0.zip",
+      "file": "gba-v0.1.0.zip",
+      "size": 204087,
+      "url": "https://github.com/Macs75/gba-retro-go-sd/releases/tag/v0.1.0",
+      "version": "v0.1.0"
+    }
+  },
+  "Macs75/gngeo-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-11-14",
+      "download": "https://github.com/Macs75/gngeo-retro-go-sd/releases/download/v0.0.7/gngeo-v0.0.7.zip",
+      "file": "gngeo-v0.0.7.zip",
+      "size": 149229,
+      "url": "https://github.com/Macs75/gngeo-retro-go-sd/releases/tag/v0.0.7",
+      "version": "v0.0.7"
+    }
+  },
+  "Macs75/pico8_gnw_distro": {
+    "pre": {
+      "date": "2026-10-01",
+      "download": "https://github.com/Macs75/pico8_gnw_distro/releases/download/v.2.0.1/pico8_cores-2026-10.01.zip",
+      "file": "pico8_cores-2026-10.01.zip",
+      "size": 206399,
+      "url": "https://github.com/Macs75/pico8_gnw_distro/releases/tag/v.2.0.1",
+      "version": "v.2.0.1"
+    },
+    "release": {
+      "date": "2026-06-07",
+      "download": "https://github.com/Macs75/pico8_gnw_distro/releases/download/v.0.1.6/pico8_cores-2026-06-07.zip",
+      "file": "pico8_cores-2026-06-07.zip",
+      "size": 193917,
+      "url": "https://github.com/Macs75/pico8_gnw_distro/releases/tag/v.0.1.6",
+      "version": "v.0.1.6"
+    }
+  },
+  "Macs75/snes-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-10-23",
+      "download": "https://github.com/Macs75/snes-retro-go-sd/releases/download/v0.0.9/snes-v0.0.9.zip",
+      "file": "snes-v0.0.9.zip",
+      "size": 369303,
+      "url": "https://github.com/Macs75/snes-retro-go-sd/releases/tag/v0.0.9",
+      "version": "v0.0.9"
+    }
+  },
   "julenvitoria/DosAT-retro-go-sd": {
-    "date": "2026-11-21",
-    "download": "https://github.com/julenvitoria/DosAT-retro-go-sd/releases/download/v0.0.6/dosat.bin",
-    "file": "dosat.bin",
-    "prerelease": false,
-    "size": 170200,
-    "url": "https://github.com/julenvitoria/DosAT-retro-go-sd/releases/tag/v0.0.6",
-    "version": "v0.0.6"
+    "pre": null,
+    "release": {
+      "date": "2026-11-21",
+      "download": "https://github.com/julenvitoria/DosAT-retro-go-sd/releases/download/v0.0.6/dosat.bin",
+      "file": "dosat.bin",
+      "size": 170200,
+      "url": "https://github.com/julenvitoria/DosAT-retro-go-sd/releases/tag/v0.0.6",
+      "version": "v0.0.6"
+    }
   },
   "julenvitoria/DosXT-retro-go-sd": {
-    "date": "2026-11-09",
-    "download": "https://github.com/julenvitoria/DosXT-retro-go-sd/releases/download/v0.0.2/dosxt.bin",
-    "file": "dosxt.bin",
-    "prerelease": false,
-    "size": 132404,
-    "url": "https://github.com/julenvitoria/DosXT-retro-go-sd/releases/tag/v0.0.2",
-    "version": "v0.0.2"
+    "pre": null,
+    "release": {
+      "date": "2026-11-09",
+      "download": "https://github.com/julenvitoria/DosXT-retro-go-sd/releases/download/v0.0.2/dosxt.bin",
+      "file": "dosxt.bin",
+      "size": 132404,
+      "url": "https://github.com/julenvitoria/DosXT-retro-go-sd/releases/tag/v0.0.2",
+      "version": "v0.0.2"
+    }
   },
   "julenvitoria/cannonball-retro-go-sd": {
-    "date": "2026-10-30",
-    "download": "https://github.com/julenvitoria/cannonball-retro-go-sd/releases/download/v1.0.1/Cannonball.bin",
-    "file": "Cannonball.bin",
-    "prerelease": false,
-    "size": 139388,
-    "url": "https://github.com/julenvitoria/cannonball-retro-go-sd/releases/tag/v1.0.1",
-    "version": "v1.0.1"
+    "pre": null,
+    "release": {
+      "date": "2026-10-30",
+      "download": "https://github.com/julenvitoria/cannonball-retro-go-sd/releases/download/v1.0.1/Cannonball.bin",
+      "file": "Cannonball.bin",
+      "size": 139388,
+      "url": "https://github.com/julenvitoria/cannonball-retro-go-sd/releases/tag/v1.0.1",
+      "version": "v1.0.1"
+    }
   },
   "julenvitoria/filemanager-retro-go-sd": {
-    "date": "2026-11-17",
-    "download": "https://github.com/julenvitoria/filemanager-retro-go-sd/releases/download/v1.1.1/FileManager.bin",
-    "file": "FileManager.bin",
-    "prerelease": false,
-    "size": 123692,
-    "url": "https://github.com/julenvitoria/filemanager-retro-go-sd/releases/tag/v1.1.1",
-    "version": "v1.1.1"
+    "pre": null,
+    "release": {
+      "date": "2026-11-17",
+      "download": "https://github.com/julenvitoria/filemanager-retro-go-sd/releases/download/v1.1.1/FileManager.bin",
+      "file": "FileManager.bin",
+      "size": 123692,
+      "url": "https://github.com/julenvitoria/filemanager-retro-go-sd/releases/tag/v1.1.1",
+      "version": "v1.1.1"
+    }
   },
   "julenvitoria/scummvm-retro-go-sd": {
-    "date": "2026-11-22",
-    "download": "https://github.com/julenvitoria/scummvm-retro-go-sd/releases/download/v0.7.0/scummvm-retro-go-sd-v0.7.0.zip",
-    "file": "scummvm-retro-go-sd-v0.7.0.zip",
-    "prerelease": false,
-    "size": 19185250,
-    "url": "https://github.com/julenvitoria/scummvm-retro-go-sd/releases/tag/v0.7.0",
-    "version": "v0.7.0"
+    "pre": null,
+    "release": {
+      "date": "2026-11-22",
+      "download": "https://github.com/julenvitoria/scummvm-retro-go-sd/releases/download/v0.7.0/scummvm-retro-go-sd-v0.7.0.zip",
+      "file": "scummvm-retro-go-sd-v0.7.0.zip",
+      "size": 19185250,
+      "url": "https://github.com/julenvitoria/scummvm-retro-go-sd/releases/tag/v0.7.0",
+      "version": "v0.7.0"
+    }
+  },
+  "landsat77/another-world-gnw": {
+    "pre": null,
+    "release": {
+      "date": "2026-10-19",
+      "download": "https://github.com/landsat77/another-world-gnw/releases/download/v1.1.1/AnotherWorld-v1.1.1.zip",
+      "file": "AnotherWorld-v1.1.1.zip",
+      "size": 29331,
+      "url": "https://github.com/landsat77/another-world-gnw/releases/tag/v1.1.1",
+      "version": "v1.1.1"
+    }
+  },
+  "landsat77/crs68k-gnw": {
+    "pre": null,
+    "release": {
+      "date": "2026-10-25",
+      "download": "https://github.com/landsat77/crs68k-gnw/releases/download/v1.1.0/ChoRenSha-v1.1.0.zip",
+      "file": "ChoRenSha-v1.1.0.zip",
+      "size": 8265056,
+      "url": "https://github.com/landsat77/crs68k-gnw/releases/tag/v1.1.0",
+      "version": "v1.1.0"
+    }
+  },
+  "landsat77/flashback-gnw": {
+    "pre": null,
+    "release": {
+      "date": "2026-10-19",
+      "download": "https://github.com/landsat77/flashback-gnw/releases/download/v1.0.2/Flashback-v1.0.2.zip",
+      "file": "Flashback-v1.0.2.zip",
+      "size": 1241360,
+      "url": "https://github.com/landsat77/flashback-gnw/releases/tag/v1.0.2",
+      "version": "v1.0.2"
+    }
+  },
+  "landsat77/heart-of-darkness-gnw": {
+    "pre": null,
+    "release": {
+      "date": "2026-10-26",
+      "download": "https://github.com/landsat77/heart-of-darkness-gnw/releases/download/v1.0.1/HeartOfDarkness-v1.0.1.zip",
+      "file": "HeartOfDarkness-v1.0.1.zip",
+      "size": 140010,
+      "url": "https://github.com/landsat77/heart-of-darkness-gnw/releases/tag/v1.0.1",
+      "version": "v1.0.1"
+    }
+  },
+  "landsat77/jazz-jackrabbit-gnw": {
+    "pre": null,
+    "release": {
+      "date": "2026-11-06",
+      "download": "https://github.com/landsat77/jazz-jackrabbit-gnw/releases/download/v1.0.6/Jazz-v1.0.6.zip",
+      "file": "Jazz-v1.0.6.zip",
+      "size": 1471389,
+      "url": "https://github.com/landsat77/jazz-jackrabbit-gnw/releases/tag/v1.0.6",
+      "version": "v1.0.6"
+    }
+  },
+  "landsat77/music-player-gnw": {
+    "pre": null,
+    "release": {
+      "date": "2026-10-19",
+      "download": "https://github.com/landsat77/music-player-gnw/releases/download/v1.2.1/MusicPlayer-v1.2.1.zip",
+      "file": "MusicPlayer-v1.2.1.zip",
+      "size": 240311,
+      "url": "https://github.com/landsat77/music-player-gnw/releases/tag/v1.2.1",
+      "version": "v1.2.1"
+    }
+  },
+  "landsat77/prince-of-persia-gnw": {
+    "pre": null,
+    "release": {
+      "date": "2026-10-25",
+      "download": "https://github.com/landsat77/prince-of-persia-gnw/releases/download/v1.2.2/PrinceOfPersia-v1.2.2.zip",
+      "file": "PrinceOfPersia-v1.2.2.zip",
+      "size": 997286,
+      "url": "https://github.com/landsat77/prince-of-persia-gnw/releases/tag/v1.2.2",
+      "version": "v1.2.2"
+    }
+  },
+  "landsat77/rick-dangerous-gnw": {
+    "pre": null,
+    "release": {
+      "date": "2026-10-25",
+      "download": "https://github.com/landsat77/rick-dangerous-gnw/releases/download/v1.0.0/RickDangerous-v1.0.0.zip",
+      "file": "RickDangerous-v1.0.0.zip",
+      "size": 1524702,
+      "url": "https://github.com/landsat77/rick-dangerous-gnw/releases/tag/v1.0.0",
+      "version": "v1.0.0"
+    }
+  },
+  "landsat77/sdbench-gnw": {
+    "pre": null,
+    "release": {
+      "date": "2026-10-25",
+      "download": "https://github.com/landsat77/sdbench-gnw/releases/download/v1.1.1/SDBench-v1.1.1.zip",
+      "file": "SDBench-v1.1.1.zip",
+      "size": 31040,
+      "url": "https://github.com/landsat77/sdbench-gnw/releases/tag/v1.1.1",
+      "version": "v1.1.1"
+    }
+  },
+  "landsat77/second-reality-gnw": {
+    "pre": null,
+    "release": {
+      "date": "2026-11-01",
+      "download": "https://github.com/landsat77/second-reality-gnw/releases/download/v1.1.0/SecondReality-v1.1.0.zip",
+      "file": "SecondReality-v1.1.0.zip",
+      "size": 2409666,
+      "url": "https://github.com/landsat77/second-reality-gnw/releases/tag/v1.1.0",
+      "version": "v1.1.0"
+    }
+  },
+  "landsat77/tyrian-gnw": {
+    "pre": null,
+    "release": {
+      "date": "2026-10-19",
+      "download": "https://github.com/landsat77/tyrian-gnw/releases/download/v1.0.3/Tyrian-v1.0.3.zip",
+      "file": "Tyrian-v1.0.3.zip",
+      "size": 1256729,
+      "url": "https://github.com/landsat77/tyrian-gnw/releases/tag/v1.0.3",
+      "version": "v1.0.3"
+    }
+  },
+  "landsat77/vvvvvv-gnw": {
+    "pre": null,
+    "release": {
+      "date": "2026-10-25",
+      "download": "https://github.com/landsat77/vvvvvv-gnw/releases/download/v1.0.1/VVVVVV-v1.0.1.zip",
+      "file": "VVVVVV-v1.0.1.zip",
+      "size": 736545,
+      "url": "https://github.com/landsat77/vvvvvv-gnw/releases/tag/v1.0.1",
+      "version": "v1.0.1"
+    }
+  },
+  "landsat77/wolf3d-gnw": {
+    "pre": null,
+    "release": {
+      "date": "2026-10-19",
+      "download": "https://github.com/landsat77/wolf3d-gnw/releases/download/v1.0.1/Wolf3D-v1.0.1.zip",
+      "file": "Wolf3D-v1.0.1.zip",
+      "size": 287682,
+      "url": "https://github.com/landsat77/wolf3d-gnw/releases/tag/v1.0.1",
+      "version": "v1.0.1"
+    }
+  },
+  "osirisad/retro-go-bart-simpsons-cupcake-crisis": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-11",
+      "download": "https://github.com/osirisad/retro-go-bart-simpsons-cupcake-crisis/releases/download/v1.3.1/Cupcake-v1.3.1.zip",
+      "file": "Cupcake-v1.3.1.zip",
+      "size": 372458,
+      "url": "https://github.com/osirisad/retro-go-bart-simpsons-cupcake-crisis/releases/tag/v1.3.1",
+      "version": "v1.3.1"
+    }
+  },
+  "sylverb/game-and-watch-retro-go-sd": {
+    "pre": {
+      "date": "2026-11-24",
+      "download": "https://github.com/sylverb/game-and-watch-retro-go-sd/releases/download/v2.0.0-rc2/retro-go_update.bin",
+      "file": "retro-go_update.bin",
+      "size": 6096900,
+      "url": "https://github.com/sylverb/game-and-watch-retro-go-sd/releases/tag/v2.0.0-rc2",
+      "version": "v2.0.0-rc2"
+    },
+    "release": {
+      "date": "2026-07-29",
+      "download": "https://github.com/sylverb/game-and-watch-retro-go-sd/releases/download/v1.4.1/retro-go_update.bin",
+      "file": "retro-go_update.bin",
+      "size": 6690820,
+      "url": "https://github.com/sylverb/game-and-watch-retro-go-sd/releases/tag/v1.4.1",
+      "version": "v1.4.1"
+    }
+  },
+  "sylverb/gba-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-08-21",
+      "download": "https://github.com/sylverb/gba-retro-go-sd/releases/download/v0.0.1/gba-v0.0.1.zip",
+      "file": "gba-v0.0.1.zip",
+      "size": 175608,
+      "url": "https://github.com/sylverb/gba-retro-go-sd/releases/tag/v0.0.1",
+      "version": "v0.0.1"
+    }
+  },
+  "sylverb/gngeo-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-10-04",
+      "download": "https://github.com/sylverb/gngeo-retro-go-sd/releases/download/v0.0.5/gngeo-v0.0.5.zip",
+      "file": "gngeo-v0.0.5.zip",
+      "size": 108534,
+      "url": "https://github.com/sylverb/gngeo-retro-go-sd/releases/tag/v0.0.5",
+      "version": "v0.0.5"
+    }
+  },
+  "sylverb/snes-retro-go-sd": {
+    "pre": null,
+    "release": {
+      "date": "2026-09-15",
+      "download": "https://github.com/sylverb/snes-retro-go-sd/releases/download/v0.0.5/snes-v0.0.5.zip",
+      "file": "snes-v0.0.5.zip",
+      "size": 101617,
+      "url": "https://github.com/sylverb/snes-retro-go-sd/releases/tag/v0.0.5",
+      "version": "v0.0.5"
+    }
   }
 }
