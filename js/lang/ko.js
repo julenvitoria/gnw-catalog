@@ -35,7 +35,7 @@ export default {
   fw_note: "새 코어와 홈브루는 펌웨어의 RC(사전 릴리스)에서만 작동합니다.",
   fw_official: "공식 릴리스",
   fw_rc: "RC(사전 릴리스)",
-  fw_assets: "릴리스 페이지를 열고 본체(Mario 또는 Zelda)에 맞는 파일을 내려받으세요.",
+  fw_assets: "retro-go_update.bin을 SD 카드 루트에 복사하고 본체를 켜면 자동으로 설치됩니다.",
   data_own: "원본 게임 파일이 필요합니다.",
   data_free: "무료로 받을 수 있는 게임 파일이 필요합니다.",
   fork_of: "{r}의 포크",

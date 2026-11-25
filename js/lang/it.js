@@ -35,7 +35,7 @@ export default {
   fw_note: "I nuovi core e homebrew funzionano solo con la RC (anteprima) del firmware.",
   fw_official: "Release ufficiale",
   fw_rc: "RC (anteprima)",
-  fw_assets: "Apri la pagina della release e scarica il file per la tua console (Mario o Zelda).",
+  fw_assets: "Copia retro-go_update.bin nella radice della SD e accendi la console: si installa da solo.",
   data_own: "Richiede i file del gioco originale.",
   data_free: "Richiede file di gioco scaricabili gratuitamente.",
   fork_of: "Fork di {r}",

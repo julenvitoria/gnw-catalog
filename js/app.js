@@ -164,7 +164,7 @@ function fwButton(id, r) {
   const a = $(id);
   a.hidden = !r;
   if (!r) return;
-  a.href = r.url;
+  a.href = r.download || r.url;
   a.querySelector("strong").textContent = r.version;
   a.querySelector("em").textContent = fmtDate(r.date);
 }

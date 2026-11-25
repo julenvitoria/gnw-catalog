@@ -35,7 +35,7 @@ export default {
   fw_note: "新的核心和自制程序只能在固件的 RC（预发布版）上运行。",
   fw_official: "正式版",
   fw_rc: "RC（预发布版）",
-  fw_assets: "打开发布页面，下载适合你的主机（Mario 或 Zelda）的文件。",
+  fw_assets: "将 retro-go_update.bin 复制到 SD 卡根目录并开机，即可自动安装。",
   data_own: "需要原版游戏文件。",
   data_free: "需要可免费下载的游戏文件。",
   fork_of: "{r} 的分支",
