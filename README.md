@@ -27,6 +27,9 @@ download link to each project's latest release.
   the `.bin` (once per version): the tabs it adds, their `/roms/` folder and
   extensions, and which firmware it is for. The
   page reads that file, so it never has to ask GitHub on every visit.
+- A project the firmware's installer bundles that has no entry here gets an
+  issue ("Falta en el catálogo: owner/repo", label `falta-en-catalogo`) with
+  its release and header; it closes itself once the entry is added.
 - To refresh at once: Actions → Versions → Run workflow.
 
 ## Adding a project

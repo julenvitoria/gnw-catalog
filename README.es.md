@@ -29,6 +29,10 @@ enlace de descarga a la última versión de cada proyecto.
   versión): las pestañas que añade, su carpeta en `/roms/`, las extensiones y
   para qué firmware es. La página lee ese archivo, así que no consulta a GitHub en cada
   visita.
+- Si el instalador del firmware incluye un proyecto que no tiene ficha aquí,
+  se abre un issue («Falta en el catálogo: owner/repo», etiqueta
+  `falta-en-catalogo`) con su release y su cabecera; se cierra solo cuando se
+  añade la ficha.
 - Para actualizarlo al momento: Actions → Versions → Run workflow.
 
 ## Añadir un proyecto

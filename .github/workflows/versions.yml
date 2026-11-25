@@ -1,6 +1,8 @@
 # Every 8 hours: note the latest release of every project in catalog.json
 # (version, date, download link) in versions.json, so the page shows them
 # without asking GitHub on every visit. Commits only when something changed.
+# A project the firmware's installer bundles without an entry in catalog.json
+# gets an issue (tools/missing_issues.py), closed once it is added.
 # Also runs when catalog.json changes, and by hand (Actions -> Versions ->
 # Run workflow).
 name: Versions
@@ -11,10 +13,11 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["catalog.json", "tools/update_versions.py", ".github/workflows/versions.yml"]
+    paths: ["catalog.json", "tools/*.py", ".github/workflows/versions.yml"]
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: versions
@@ -29,6 +32,10 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 tools/update_versions.py
+      - name: Open an issue for each installer project without an entry
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 tools/missing_issues.py
       - name: Commit if something changed
         run: |
           git config user.name "github-actions[bot]"
