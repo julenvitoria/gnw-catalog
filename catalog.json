@@ -135,6 +135,16 @@
       }
     },
     {
+      "repo": "dadagm/GameWatchMusicPlayer",
+      "name": "G&W Music Player",
+      "kind": "homebrew",
+      "system": "App",
+      "desc": {
+        "en": "MP3 and WAV player for the /music folder, with a spectrum display, shuffle, resume and two skins.",
+        "es": "Reproductor de MP3 y WAV de la carpeta /music, con espectro, modo aleatorio, reanudación y dos temas."
+      }
+    },
+    {
       "repo": "landsat77/sdbench-gnw",
       "name": "SD Bench",
       "kind": "homebrew",
