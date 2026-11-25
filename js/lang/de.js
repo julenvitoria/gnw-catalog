@@ -44,6 +44,6 @@ export default {
   dl_stable: "{v} herunterladen",
   dl_pre: "Vorabversion {v}",
   sys_Demo: "Demo",
-  pre_for_rc: "Mit Firmware 2.0.0-rc1 oder neuer die Vorabversion verwenden; die offizielle läuft nur mit Firmware 1.x.",
-  pre_for_rc_only: "Benötigt Firmware 2.0.0-rc1 oder neuer.",
+  pre_for_rc: "Läuft nicht mit Firmware v2.0.0-rc1 oder neuer: ab dieser Version die Vorabversion verwenden.",
+  pre_for_rc_only: "Benötigt Firmware v2.0.0-rc1 oder neuer.",
 };

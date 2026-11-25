@@ -44,6 +44,6 @@ export default {
   dl_stable: "下载 {v}",
   dl_pre: "预发布 {v}",
   sys_Demo: "演示",
-  pre_for_rc: "固件 2.0.0-rc1 及以上请使用预发布版；正式版仅适用于 1.x 固件。",
-  pre_for_rc_only: "需要 2.0.0-rc1 或更高版本的固件。",
+  pre_for_rc: "不适用于 v2.0.0-rc1 及以上固件：从该版本起请使用预发布版。",
+  pre_for_rc_only: "需要 v2.0.0-rc1 或更高版本的固件。",
 };

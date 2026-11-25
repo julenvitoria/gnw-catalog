@@ -44,6 +44,6 @@ export default {
   dl_stable: "Descargar {v}",
   dl_pre: "Previa {v}",
   sys_Demo: "Demo",
-  pre_for_rc: "Con el firmware 2.0.0-rc1 o posterior usa la versión previa; la oficial solo funciona con el firmware 1.x.",
-  pre_for_rc_only: "Necesita el firmware 2.0.0-rc1 o posterior.",
+  pre_for_rc: "No funciona con el firmware v2.0.0-rc1 o posterior: a partir de esa versión usa la previa.",
+  pre_for_rc_only: "Necesita el firmware v2.0.0-rc1 o posterior.",
 };

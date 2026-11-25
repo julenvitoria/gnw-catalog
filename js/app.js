@@ -99,11 +99,13 @@ function card(it) {
     c.append(el("p", "item__rel", t("web_hint")));
   } else if (v) {
     if (v.release) c.append(relLine(v.release));
+    // its pre-release is the one for the firmware's RC: say so on the release
+    if (v.release && v.pre && it.pre_for_rc) c.append(el("p", "item__prenote", t("pre_for_rc")));
     if (v.pre) {
       const p = relLine(v.pre, "item__rel--pre");
       p.prepend(el("span", "pre", t("prerelease")), " ");
       c.append(p);
-      if (it.pre_for_rc) c.append(el("p", "item__prenote", t(v.release ? "pre_for_rc" : "pre_for_rc_only")));
+      if (it.pre_for_rc && !v.release) c.append(el("p", "item__prenote", t("pre_for_rc_only")));
     }
     if (!v.release && !v.pre) c.append(el("p", "item__rel", t("no_release")));
   }

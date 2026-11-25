@@ -44,6 +44,6 @@ export default {
   dl_stable: "下載 {v}",
   dl_pre: "預發布 {v}",
   sys_Demo: "展示",
-  pre_for_rc: "韌體 2.0.0-rc1 及以上請使用預發布版；正式版僅適用於 1.x 韌體。",
-  pre_for_rc_only: "需要 2.0.0-rc1 或更新版本的韌體。",
+  pre_for_rc: "不適用於 v2.0.0-rc1 及以上韌體：從該版本起請使用預發布版。",
+  pre_for_rc_only: "需要 v2.0.0-rc1 或更新版本的韌體。",
 };
