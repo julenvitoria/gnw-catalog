@@ -20,7 +20,7 @@ enlace de descarga a la última versión de cada proyecto.
   de arriba se muestra como un panel aparte.
 - `.github/workflows/versions.yml` se ejecuta cada 8 horas (y cada vez que
   cambia `catalog.json`): `tools/update_versions.py` consulta la última release
-  de cada proyecto, y también la previa más reciente si es más nueva (la RC del
+  de cada proyecto, y también la pre-release más reciente si es más nueva (la RC del
   firmware, o un core que la necesita), y escribe `versions.json` (versión, fecha y enlace de
   descarga). La página lee ese archivo, así que no consulta a GitHub en cada
   visita.
