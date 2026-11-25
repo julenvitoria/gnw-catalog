@@ -45,5 +45,10 @@ export default {
   dl_pre: "下載 {v}（預發布）",
   sys_Demo: "展示",
   pre_for_rc: "不適用於 v2.0.0-rc1 及以上韌體：從該版本起請使用預發布版。",
-  pre_for_rc_only: "需要 v2.0.0-rc1 或更新版本的韌體。",
+  fw_tag_rc: "韌體 v2.0.0-rc1+",
+  fw_tag_1x: "韌體 1.x",
+  only_1x: "僅適用於 1.x 韌體。",
+  cheats: "金手指",
+  bios: "BIOS",
+  bios_opt: "選用 BIOS",
 };

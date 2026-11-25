@@ -45,5 +45,10 @@ export default {
   dl_pre: "Download {v} (pre-release)",
   sys_Demo: "Demo",
   pre_for_rc: "Does not work with firmware v2.0.0-rc1 or later: from that version on, use the pre-release.",
-  pre_for_rc_only: "Needs firmware v2.0.0-rc1 or later.",
+  fw_tag_rc: "firmware v2.0.0-rc1+",
+  fw_tag_1x: "firmware 1.x",
+  only_1x: "Only works with firmware 1.x.",
+  cheats: "cheats",
+  bios: "BIOS",
+  bios_opt: "Optional BIOS",
 };

@@ -77,6 +77,8 @@ function relLine(r, cls) {
   const a = el("a", "", r.version);
   a.href = r.url; a.title = t("release_page"); a.target = "_blank"; a.rel = "noopener";
   p.append(a, document.createTextNode(` · ${fmtDate(r.date)}`));
+  const h = r.info?.header;
+  if (h) p.append(" ", el("span", `fwtag ${h >= 3 ? "fwtag--rc" : "fwtag--old"}`, t(h >= 3 ? "fw_tag_rc" : "fw_tag_1x")));
   if (r.file) p.append(el("span", "item__file", ` · ${r.file}${r.size ? ` (${fmtSize(r.size)})` : ""}`));
   return p;
 }
@@ -93,6 +95,25 @@ function card(it) {
   meta.append(by);
   c.append(head, meta, el("p", "item__desc", desc(it)));
   if (it.data) c.append(el("p", "item__data", t(it.data === "free" ? "data_free" : "data_own")));
+  const systems = v && ((v.pre?.info?.systems) || (v.release?.info?.systems));
+  if (systems || it.bios) {
+    const box = el("div", "item__card");
+    for (const sy of systems || []) {
+      const p = el("p");
+      p.append(el("b", "", sy.name), ` · /roms/${sy.dir}/`);
+      if (sy.ext?.length) p.append(el("span", "ext", ` · ${sy.ext.map((e) => "." + e).join(" ")}`));
+      if (sy.cheat) p.append(el("span", "ext", ` · ${t("cheats")}: /cheats/${sy.dir}/*.${sy.cheat}`));
+      box.append(p);
+    }
+    if (it.bios) {
+      const p = el("p");
+      const dir = `/bios/${it.bios.dir}/`;
+      p.append(el("b", "", t(it.bios.optional ? "bios_opt" : "bios")), " · ",
+        it.bios.files.length === 1 ? dir + it.bios.files[0] : `${dir} → ${it.bios.files.join(", ")}`);
+      box.append(p);
+    }
+    c.append(box);
+  }
 
   // releases: the full one, and a newer pre-release when there is one
   if (it.web) {
@@ -100,12 +121,12 @@ function card(it) {
   } else if (v) {
     if (v.release) c.append(relLine(v.release));
     // its pre-release is the one for the firmware's RC: say so on the release
-    if (v.release && v.pre && it.pre_for_rc) c.append(el("p", "item__prenote", t("pre_for_rc")));
+    const hr = v.release?.info?.header, hp = v.pre?.info?.header;
+    if (hr && hr < 3) c.append(el("p", "item__prenote", t(hp >= 3 ? "pre_for_rc" : "only_1x")));
     if (v.pre) {
       const p = relLine(v.pre, "item__rel--pre");
       p.prepend(el("span", "pre", t("prerelease")), " ");
       c.append(p);
-      if (it.pre_for_rc && !v.release) c.append(el("p", "item__prenote", t("pre_for_rc_only")));
     }
     if (!v.release && !v.pre) c.append(el("p", "item__rel", t("no_release")));
   }

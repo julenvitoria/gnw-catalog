@@ -45,5 +45,10 @@ export default {
   dl_pre: "{v} herunterladen (Vorabversion)",
   sys_Demo: "Demo",
   pre_for_rc: "Läuft nicht mit Firmware v2.0.0-rc1 oder neuer: ab dieser Version die Vorabversion verwenden.",
-  pre_for_rc_only: "Benötigt Firmware v2.0.0-rc1 oder neuer.",
+  fw_tag_rc: "Firmware v2.0.0-rc1+",
+  fw_tag_1x: "Firmware 1.x",
+  only_1x: "Läuft nur mit Firmware 1.x.",
+  cheats: "Cheats",
+  bios: "BIOS",
+  bios_opt: "Optionales BIOS",
 };

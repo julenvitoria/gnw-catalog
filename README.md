@@ -16,12 +16,14 @@ download link to each project's latest release.
   release file to offer) or `web` (a page to open instead of a download),
   `upstream` (for a fork: the original repo, whose version is shown beside it)
   and `data` (`own` = needs the original game's files, `free` = needs free
-  game files). The `firmware` entry at the top is shown as its own panel.
+  game files), `bios` (`{dir, files, optional}`). The `firmware` entry at the top is shown as its own panel.
 - `.github/workflows/versions.yml` runs every 8 hours (and whenever
   `catalog.json` changes): `tools/update_versions.py` reads each project's
   latest full release, plus its newest pre-release when that one is newer (the
   firmware's RC, or a core that needs it), and writes `versions.json`
-  (version, date, download link). The
+  (version, date, download link). For a core it also reads the header inside
+  the `.bin` (once per version): the tabs it adds, their `/roms/` folder and
+  extensions, and which firmware it is for. The
   page reads that file, so it never has to ask GitHub on every visit.
 - To refresh at once: Actions → Versions → Run workflow.
 

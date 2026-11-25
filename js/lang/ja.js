@@ -45,5 +45,10 @@ export default {
   dl_pre: "{v} をダウンロード（プレリリース）",
   sys_Demo: "デモ",
   pre_for_rc: "ファームウェア v2.0.0-rc1 以降では動作しません。そのバージョンからはプレリリースを使ってください。",
-  pre_for_rc_only: "ファームウェア v2.0.0-rc1 以降が必要です。",
+  fw_tag_rc: "ファームウェア v2.0.0-rc1+",
+  fw_tag_1x: "ファームウェア 1.x",
+  only_1x: "ファームウェア 1.x でのみ動作します。",
+  cheats: "チート",
+  bios: "BIOS",
+  bios_opt: "BIOS（任意）",
 };

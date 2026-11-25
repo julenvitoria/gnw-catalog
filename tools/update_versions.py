@@ -13,14 +13,22 @@ item's "asset" glob if it has one, else the first .zip, else the first .bin,
 never a file with "debug" in its name. Items with "web" (a page, not a
 download) are skipped.
 
+For a core it also downloads that file once per version and reads the header
+the firmware itself reads (gnw_core_meta_t, see read_core()): the launcher tabs
+the core adds, their /roms/ folder and extensions, and the header version,
+which says which firmware it is for (3 = v2.0.0-rc1 and later, older = 1.x).
+
 Runs in .github/workflows/versions.yml with GITHUB_TOKEN; locally it works
 too (set GH_TOKEN for more than 60 requests an hour). A repo that cannot be
 read keeps its previous entry, so one failure never blanks the rest.
 """
 import fnmatch
+import io
 import json
 import os
+import struct
 import sys
+import zipfile
 import urllib.error
 import urllib.request
 
@@ -68,6 +76,81 @@ def describe(rel, pattern):
     }
 
 
+# ------------------------------------------------------------ core header
+# "CORE", u16 header_version, u16 header_length, then gnw_core_meta_t
+# (Core/Inc/retro-go/gnw_core_meta.h in the firmware):
+#   u32 abi_version, abi_min_size, flags, segments_count; 4 x 12-byte segments;
+#   u32 systems_count at 72; 4 x 116-byte gnw_core_system_t at 76;
+#   u8 version[3] + char core_name[24] at 540.
+SYSTEM = struct.Struct("<32s16s32sIIIII8s8s")
+
+
+def cstr(b):
+    return b.split(b"\0", 1)[0].decode("utf-8", "replace").strip()
+
+
+def parse_core(b):
+    if len(b) < 8 or b[:4] != b"CORE":
+        return None
+    header = struct.unpack_from("<H", b, 4)[0]
+    info = {"header": header}
+    if header >= 3 and len(b) >= 567:
+        info["abi"] = struct.unpack_from("<I", b, 8)[0]
+        n = min(struct.unpack_from("<I", b, 72)[0], 4)
+        info["systems"] = []
+        for i in range(n):
+            name, dirname, exts, parse, *_rest, cheat, _ = SYSTEM.unpack_from(b, 76 + SYSTEM.size * i)
+            sysinfo = {"name": cstr(name), "dir": cstr(dirname), "ext": cstr(exts).split()}
+            if cstr(cheat):
+                sysinfo["cheat"] = cstr(cheat)
+            if parse == 1:
+                sysinfo["cdrom"] = True
+            info["systems"].append(sysinfo)
+        info["core"] = cstr(b[543:567])
+    return info
+
+
+def download(url):
+    req = urllib.request.Request(url, headers={"User-Agent": "gnw-catalog"})
+    with urllib.request.urlopen(req, timeout=120) as r:
+        return r.read()
+
+
+def read_core(rel):
+    """The header of the core in this release's file (a .bin, or a zip holding cores/*.bin)."""
+    if not rel or not rel.get("download"):
+        return None
+    data = download(rel["download"])
+    if data[:4] == b"CORE":
+        return parse_core(data[:2048])
+    try:
+        z = zipfile.ZipFile(io.BytesIO(data))
+    except zipfile.BadZipFile:
+        return None
+    for name in sorted(z.namelist(), key=lambda n: (not n.startswith("cores/"), n)):
+        if name.lower().endswith(".bin"):
+            info = parse_core(z.read(name)[:2048])
+            if info:
+                return info
+    return None
+
+
+def add_core_info(entry, previous):
+    """Fill entry[...]["info"]; reuse the previous run's when the file is the same."""
+    for key in ("release", "pre"):
+        rel = entry.get(key)
+        if not rel:
+            continue
+        old = (previous or {}).get(key) or {}
+        if old.get("download") == rel["download"] and "info" in old:
+            rel["info"] = old["info"]
+            continue
+        try:
+            rel["info"] = read_core(rel)
+        except (urllib.error.URLError, OSError) as e:
+            print(f"  {rel['download']}: {e}", file=sys.stderr)
+
+
 def releases(repo, pattern):
     rels = [r for r in (api(f"repos/{repo}/releases?per_page=30") or []) if not r.get("draft")]
     rels.sort(key=lambda r: r.get("published_at") or "", reverse=True)
@@ -83,12 +166,15 @@ def main():
     with open(os.path.join(ROOT, "catalog.json"), encoding="utf-8") as fh:
         cat = json.load(fh)
     wanted = {}                                      # repo -> asset glob
+    cores = set()                                    # repos whose header is read
     fw = cat.get("firmware")
     if fw:
         wanted[fw["repo"]] = fw.get("asset")
     for it in cat["items"]:
         if not it.get("web"):
             wanted[it["repo"]] = it.get("asset")
+            if it["kind"] == "core":
+                cores.add(it["repo"])
         if it.get("upstream"):
             wanted.setdefault(it["upstream"], it.get("asset"))
 
@@ -107,6 +193,8 @@ def main():
             out[repo] = previous.get(repo)
             print(f"{repo}: {e} (kept the previous entry)", file=sys.stderr)
             continue
+        if repo in cores:
+            add_core_info(out[repo], previous.get(repo))
         r, p = out[repo]["release"], out[repo]["pre"]
         print(f"{repo}: {r['version'] if r else '-'}{' + pre ' + p['version'] if p else ''}", file=sys.stderr)
 

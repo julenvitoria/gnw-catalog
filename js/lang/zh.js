@@ -45,5 +45,10 @@ export default {
   dl_pre: "下载 {v}（预发布）",
   sys_Demo: "演示",
   pre_for_rc: "不适用于 v2.0.0-rc1 及以上固件：从该版本起请使用预发布版。",
-  pre_for_rc_only: "需要 v2.0.0-rc1 或更高版本的固件。",
+  fw_tag_rc: "固件 v2.0.0-rc1+",
+  fw_tag_1x: "固件 1.x",
+  only_1x: "仅适用于 1.x 固件。",
+  cheats: "金手指",
+  bios: "BIOS",
+  bios_opt: "可选 BIOS",
 };
