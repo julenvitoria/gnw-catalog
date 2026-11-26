@@ -221,12 +221,12 @@
   "julenvitoria/filemanager-retro-go-sd": {
     "pre": null,
     "release": {
-      "date": "2026-11-17",
-      "download": "https://github.com/julenvitoria/filemanager-retro-go-sd/releases/download/v1.1.1/FileManager.bin",
+      "date": "2026-11-26",
+      "download": "https://github.com/julenvitoria/filemanager-retro-go-sd/releases/download/v1.2.0/FileManager.bin",
       "file": "FileManager.bin",
-      "size": 123692,
-      "url": "https://github.com/julenvitoria/filemanager-retro-go-sd/releases/tag/v1.1.1",
-      "version": "v1.1.1"
+      "size": 124348,
+      "url": "https://github.com/julenvitoria/filemanager-retro-go-sd/releases/tag/v1.2.0",
+      "version": "v1.2.0"
     }
   },
   "julenvitoria/scummvm-retro-go-sd": {
