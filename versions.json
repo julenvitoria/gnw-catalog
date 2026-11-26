@@ -149,11 +149,11 @@
     "pre": null,
     "release": {
       "date": "2026-11-25",
-      "download": "https://github.com/dadagm/GameWatchMusicPlayer/releases/download/v1.0.11/MusicPlayer.bin",
+      "download": "https://github.com/dadagm/GameWatchMusicPlayer/releases/download/v1.0.2/MusicPlayer.bin",
       "file": "MusicPlayer.bin",
       "size": 157107,
-      "url": "https://github.com/dadagm/GameWatchMusicPlayer/releases/tag/v1.0.11",
-      "version": "v1.0.11"
+      "url": "https://github.com/dadagm/GameWatchMusicPlayer/releases/tag/v1.0.2",
+      "version": "v1.0.2"
     }
   },
   "julenvitoria/DosAT-retro-go-sd": {
