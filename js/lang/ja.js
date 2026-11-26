@@ -24,7 +24,7 @@ export default {
   count: "{n} 件",
   missing: "足りないプロジェクトは？",
   propose: "ここで提案",
-  updated: "バージョンは 8 時間ごとに確認します。",
+  updated: "バージョンは 1 時間ごとに確認します。",
   lang: "言語",
   sys_Port: "移植",
   sys_App: "アプリ",

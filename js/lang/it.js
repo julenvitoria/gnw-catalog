@@ -24,7 +24,7 @@ export default {
   count: "{n} progetti",
   missing: "Manca un progetto?",
   propose: "Proponilo qui",
-  updated: "Le versioni vengono controllate ogni 8 ore.",
+  updated: "Le versioni vengono controllate ogni ora.",
   lang: "Lingua",
   sys_Port: "Port",
   sys_App: "App",

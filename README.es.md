@@ -21,7 +21,7 @@ enlace de descarga a la última versión de cada proyecto.
   cita en el README del firmware; «en el instalador» se lee del
   `packages.list` de installer-retro-go-sd). La ficha `firmware`
   de arriba se muestra como un panel aparte.
-- `.github/workflows/versions.yml` se ejecuta cada 8 horas (y cada vez que
+- `.github/workflows/versions.yml` se ejecuta cada hora (y cada vez que
   cambia `catalog.json`): `tools/update_versions.py` consulta la última release
   de cada proyecto, y también la pre-release más reciente si es más nueva (la RC del
   firmware, o un core que la necesita), y escribe `versions.json` (versión, fecha y enlace de

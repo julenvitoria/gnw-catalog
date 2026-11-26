@@ -24,7 +24,7 @@ export default {
   count: "{n} 个项目",
   missing: "缺少某个项目？",
   propose: "在这里推荐",
-  updated: "版本每 8 小时检查一次。",
+  updated: "版本每小时检查一次。",
   lang: "语言",
   sys_Port: "移植",
   sys_App: "应用",

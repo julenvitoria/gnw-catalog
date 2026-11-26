@@ -19,7 +19,7 @@ download link to each project's latest release.
   game files), `bios` (`{dir, files, optional, included, when}`) and `official` (listed
   by sylverb in the firmware's README; "in the installer" is read from
   installer-retro-go-sd's `packages.list`). The `firmware` entry at the top is shown as its own panel.
-- `.github/workflows/versions.yml` runs every 8 hours (and whenever
+- `.github/workflows/versions.yml` runs every hour (and whenever
   `catalog.json` changes): `tools/update_versions.py` reads each project's
   latest full release, plus its newest pre-release when that one is newer (the
   firmware's RC, or a core that needs it), and writes `versions.json`

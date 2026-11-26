@@ -1,4 +1,4 @@
-# Every 8 hours: note the latest release of every project in catalog.json
+# Every hour: note the latest release of every project in catalog.json
 # (version, date, download link) in versions.json, so the page shows them
 # without asking GitHub on every visit. Commits only when something changed.
 # A project the firmware's installer bundles without an entry in catalog.json
@@ -9,7 +9,7 @@ name: Versions
 
 on:
   schedule:
-    - cron: "41 */8 * * *"
+    - cron: "41 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
