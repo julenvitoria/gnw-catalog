@@ -24,7 +24,7 @@ export default {
   count: "{n} 個專案",
   missing: "缺少某個專案？",
   propose: "在這裡推薦",
-  updated: "版本每小時檢查一次。",
+  updated: "版本每 30 分鐘檢查一次。",
   lang: "語言",
   sys_Port: "移植",
   sys_App: "應用程式",

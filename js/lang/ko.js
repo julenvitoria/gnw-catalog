@@ -24,7 +24,7 @@ export default {
   count: "프로젝트 {n}개",
   missing: "빠진 프로젝트가 있나요?",
   propose: "여기서 제안하기",
-  updated: "버전은 1시간마다 확인합니다.",
+  updated: "버전은 30분마다 확인합니다.",
   lang: "언어",
   sys_Port: "포트",
   sys_App: "앱",
