@@ -232,9 +232,9 @@
   "julenvitoria/scummvm-retro-go-sd": {
     "pre": null,
     "release": {
-      "date": "2026-11-22",
-      "download": "https://github.com/julenvitoria/scummvm-retro-go-sd/releases/download/v0.7.0/scummvm-retro-go-sd-v0.7.0.zip",
-      "file": "scummvm-retro-go-sd-v0.7.0.zip",
+      "date": "2026-11-26",
+      "download": "https://github.com/julenvitoria/scummvm-retro-go-sd/releases/download/v0.7.2/scummvm-retro-go-sd-v0.7.2.zip",
+      "file": "scummvm-retro-go-sd-v0.7.2.zip",
       "info": {
         "abi": 2,
         "core": "ScummVM (LucasArts)",
@@ -249,9 +249,9 @@
           }
         ]
       },
-      "size": 19185250,
-      "url": "https://github.com/julenvitoria/scummvm-retro-go-sd/releases/tag/v0.7.0",
-      "version": "v0.7.0"
+      "size": 19187787,
+      "url": "https://github.com/julenvitoria/scummvm-retro-go-sd/releases/tag/v0.7.2",
+      "version": "v0.7.2"
     }
   },
   "landsat77/another-world-gnw": {
