@@ -210,23 +210,23 @@
   "julenvitoria/cannonball-retro-go-sd": {
     "pre": null,
     "release": {
-      "date": "2026-10-30",
-      "download": "https://github.com/julenvitoria/cannonball-retro-go-sd/releases/download/v1.0.1/Cannonball.bin",
+      "date": "2026-11-27",
+      "download": "https://github.com/julenvitoria/cannonball-retro-go-sd/releases/download/v1.0.2/Cannonball.bin",
       "file": "Cannonball.bin",
       "size": 139388,
-      "url": "https://github.com/julenvitoria/cannonball-retro-go-sd/releases/tag/v1.0.1",
-      "version": "v1.0.1"
+      "url": "https://github.com/julenvitoria/cannonball-retro-go-sd/releases/tag/v1.0.2",
+      "version": "v1.0.2"
     }
   },
   "julenvitoria/filemanager-retro-go-sd": {
     "pre": null,
     "release": {
-      "date": "2026-11-26",
-      "download": "https://github.com/julenvitoria/filemanager-retro-go-sd/releases/download/v1.2.0/FileManager.bin",
+      "date": "2026-11-27",
+      "download": "https://github.com/julenvitoria/filemanager-retro-go-sd/releases/download/v1.2.1/FileManager.bin",
       "file": "FileManager.bin",
       "size": 124348,
-      "url": "https://github.com/julenvitoria/filemanager-retro-go-sd/releases/tag/v1.2.0",
-      "version": "v1.2.0"
+      "url": "https://github.com/julenvitoria/filemanager-retro-go-sd/releases/tag/v1.2.1",
+      "version": "v1.2.1"
     }
   },
   "julenvitoria/scummvm-retro-go-sd": {
